@@ -1,7 +1,20 @@
 /* Project CSS File */
 
+@font-face {
+    font-family: 'ChunkFiveRegular';
+    src: url('../font/Chunkfive-webfont.eot');
+    src: url('../font/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Chunkfive-webfont.woff') format('woff'),
+         url('../font/Chunkfive-webfont.ttf') format('truetype'),
+         url('../font/Chunkfive-webfont.svg#ChunkFiveRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
 	background: url('../images/bg.png') repeat-x;
+	font-family: Arial, Helvetica, sans-serif;
+	width: 100%;
 	margin: 0;
 }
 
@@ -18,69 +31,108 @@ body {
 
 #wrapper {
 	max-width: 960px;
-	margin: 0 auto;
-	overflow: visible;
 	padding: 0 3.125%; /*(30/960px)*/
+	margin: 0 auto;
+	background: rgba(0,0,0, .25);
 }
+
 
 header {
-	margin: 0;
 	height: 75px;
+	width: 100%;
 }
 
-header h1 {
-	color: #999;
-	margin: 0;
+#logo_container {
+	width: 19.2307692%; /*175/910*/
+	margin-top: 10px;
+	float: left;
 }
+
+#logo img{
+	max-width: 100%;
+}
+
 
 nav {
 	height: 75px;
 	float: right;
-	width: 77.4725275%; /*705px/910px*/
-	/*background: url('../images/nav_bg.png') repeat-x 0 0;*/
+	width: 80.7692308%; /*735px/910px*/
+	text-transform: uppercase;
 }
 
-nav ul {
-	margin: 0;
-}
 
 nav ul li {
 	float: left;
 	list-style: none;
-	margin-top: 25px;
-	margin-left: 2.8368794%; /*20/705px*/
-	font: 1.1em/1.25 Verdana;
-	color: #999;
-	padding: 0;
-	text-shadow: 0px 1px 3px #666;
+	font: 1.2em/1.5 'Share';
+	margin-top: 10px;
+	margin-left: 2.7210884%; /*20/735px*/
+	text-shadow: 1px 1px 0px #999;
+	opacity: .7;
+	text-decoration: overline;
+	letter-spacing: .0625em;
+}
+
+nav ul li:hover {
+	opacity: 1;
+	text-decoration: none;
+
+}
+
+
+nav li a:link {
+	display: block;
+	padding: 2px 10px;
+	color: #fff;
+	text-decoration: overline;
 	
 }
 
-
-a:link {
-	color: #999;
-	text-decoration: none;
-}
-
-a:visited {
-	color: #999;
-}
-
-a:hover {
+nav li a:visited {
 	color: #fff;
-	text-decoration: underline;
+}
+
+nav li a:hover {
+	color: #fff;
+	text-decoration: none;
+	background: #0084ff;
+	-o-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	
 }
 
 a:active {
 	color: #f5f5f5;
 }
 
-
-
-
+#content {
+	width: 100%;
+	margin: 70px 0px;
+}
 
 #content h1 {
 	color: #333;
 	margin: 0;
 	text-shadow: 0px 1px 0px #fff;
+	font-family: 'ChunkFiveRegular';
 }
+
+footer {
+	box-shadow: 0px -1px 4px rgba(0,0,0, .6);
+	height: 60px;
+	overflow: visible;
+	background: #313131;
+	background: url('../images/footer_bg.jpg') repeat-x 0 0;
+	color: #fff;
+	margin: 0!important;
+	padding: 0!important;
+}
+
+#footer_container {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0
+}
+
