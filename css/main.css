@@ -1,0 +1,86 @@
+/* Project CSS File */
+
+body {
+	background: url('../images/bg.png') repeat-x;
+	margin: 0;
+}
+
+#content_sep {
+	height: 60px;
+	background: url('../images/line-shadow-960.png') no-repeat 0 0;
+	margin-top: 300px;
+}
+
+#content_sep p {
+	position: relative;
+	left: -9999px;
+}
+
+#wrapper {
+	max-width: 960px;
+	margin: 0 auto;
+	overflow: visible;
+	padding: 0 3.125%; /*(30/960px)*/
+}
+
+header {
+	margin: 0;
+	height: 75px;
+}
+
+header h1 {
+	color: #999;
+	margin: 0;
+}
+
+nav {
+	height: 75px;
+	float: right;
+	width: 77.4725275%; /*705px/910px*/
+	/*background: url('../images/nav_bg.png') repeat-x 0 0;*/
+}
+
+nav ul {
+	margin: 0;
+}
+
+nav ul li {
+	float: left;
+	list-style: none;
+	margin-top: 25px;
+	margin-left: 2.8368794%; /*20/705px*/
+	font: 1.1em/1.25 Verdana;
+	color: #999;
+	padding: 0;
+	text-shadow: 0px 1px 3px #666;
+	
+}
+
+
+a:link {
+	color: #999;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #999;
+}
+
+a:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
+a:active {
+	color: #f5f5f5;
+}
+
+
+
+
+
+#content h1 {
+	color: #333;
+	margin: 0;
+	text-shadow: 0px 1px 0px #fff;
+}
