@@ -1,53 +1,129 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset='utf-8'>
-<title>Index File</title>
-<link rel="stylesheet" href="css/main.css" />
-<link href='http://fonts.googleapis.com/css?family=Share' rel='stylesheet' type='text/css'>
-
-
-</head>
-<body>
-<div id="wrapper">
-
-<header>
-	<nav>
-		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="services.html">Services</a></li>
-			<li><a href="rates.html">Rates</a></li>
-			<li><a href="vehicles.html">Vehicles</a></li>
-			<li><a href="destinations.html">Destinations</a></li>
-			<li><a href="reservations.html">Reservations</a></li>
-		</ul>
-	</nav>
-	
-	<div id="logo_container">
-	<a id="logo" href="index.html"><img src="images/logo.png" /></a>
-	</div>
-</header>
-<div id="content">
-<h1>This is the body...</h1>
-
-<div id="content_sep">
-	<p>separator line</p>
-</div>
-</div><!--end content -->
-</div><!-- end wrapper -->
-<footer>
-<div id="footer_container">
-	<ul id="footer_nav">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="services.html">Services</a></li>
-			<li><a href="rates.html">Rates</a></li>
-			<li><a href="vehicles.html">Vehicles</a></li>
-			<li><a href="destinations.html">Destinations</a></li>
-			<li><a href="reservations.html">Reservations</a></li>
-		</ul>
-<p id="copyright">&copy;2012 Orlando Tropical Transport</p>
-		
-</div>	
-</footer>
-</body>
+	<head>
+		<meta charset='utf-8'>
+		<title>Home</title>
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/marquee.css" />
+		<link href='http://fonts.googleapis.com/css?family=Share' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.min.js"></script>
+		<script type="text/javascript" src="scripts/jquery.imgpreload.min.js"></script>
+		<script type="text/javascript" src="scripts/marquee.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<header>
+				<nav>
+					<ul>
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						<li>
+							<a href="services.html">Services</a>
+						</li>
+						<li>
+							<a href="rates.html">Rates</a>
+						</li>
+						<li>
+							<a href="vehicles.html">Vehicles</a>
+						</li>
+						<li>
+							<a href="destinations.html">Destinations</a>
+						</li>
+						<li>
+							<a href="reservations.html">Reservations</a>
+						</li>
+					</ul>
+				</nav>
+				<div id="logo_container">
+					<a id="logo" href="index.html"><img src="images/logo.png" /></a>
+				</div>
+			</header>
+			<div id="marquee_header">
+				<h1>Test Heading Big Words</h1>
+				<h2>Slightly smaller big words</h2>
+				<p>
+					This will be some text that says a lot more about something
+				</p>
+			</div>
+			<div id="container">
+				<div id="marquee_container autoplay">
+					<div class="marquee_container">
+						<div class="marquee_photos"></div>
+						<!-- end marquee_photos -->
+						<div class="marquee_caption">
+							<div class="marquee_caption_content"></div>
+							<!-- end marquee_caption_content -->
+						</div>
+						<!-- end marquee_caption -->
+						<div class="marquee_nav"></div><!-- end marquee_nav -->
+						<div class="marquee_panels">
+							<div class="marquee_panel">
+								<img src="images/photos/city_by_water.jpg" class="marquee_panel_photo" alt="image 1" />
+								<div class="marquee_panel_caption">
+									<h2>City</h2>
+									<p>
+										This is a test caption for a city by the water.
+										<br />
+										This is a test caption on line two for city by the water.
+									</p>
+								</div><!--end marquee_panel_caption -->
+							</div><!-- end marquee_panel -->
+							<div class="marquee_panel">
+								<img src="images/photos/airline.jpg" class="marquee_panel_photo" alt="image 2" />
+								<div class="marquee_panel_caption">
+									<h2>Airport Shuttle Service</h2>
+									<p>
+										Airport Shuttle Service.
+										<br />
+										This is a test caption on line two for Image 2.
+									</p>
+								</div><!--end marquee_panel_caption -->
+							</div><!-- end marquee_panel -->
+							<div class="marquee_panel">
+								<img src="images/photos/cruise.jpg" class="marquee_panel_photo" alt="Cruise Ship" />
+								<div class="marquee_panel_caption">
+									<h2>Cruise Ship Transportation</h2>
+									<p>
+										Going on a cruise?
+										<br />
+										Orlando Tropical Transport Cruise Service.
+									</p>
+								</div><!--end marquee_panel_caption -->
+							</div><!-- end marquee_panel -->
+						</div>
+						<!-- end marquee_panels -->
+					</div>
+					<!--end marquee container -->
+				</div><!--end container -->
+			</div>
+		</div><!-- end wrapper -->
+		<footer>
+			<div id="footer_container">
+				<ul id="footer_nav">
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="services.html">Services</a>
+					</li>
+					<li>
+						<a href="rates.html">Rates</a>
+					</li>
+					<li>
+						<a href="vehicles.html">Vehicles</a>
+					</li>
+					<li>
+						<a href="destinations.html">Destinations</a>
+					</li>
+					<li>
+						<a href="reservations.html">Reservations</a>
+					</li>
+				</ul>
+				<p id="copyright">
+					&copy;2012 Orlando Tropical Transport
+				</p>
+			</div>
+		</footer>
+	</body>
 </html>
