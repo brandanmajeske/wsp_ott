@@ -22,6 +22,15 @@ margin-right: 20px;
 	text-shadow: 1px 1px 0px #fff;
 }
 
+#marquee_header p {
+	font: 1.25em/1.35 'Ropa Sans';
+	margin-top: 10px; 	
+}
+
+#company_name  a, a:visited{
+	color: #0084FF;
+}
+
 .marquee_container {
 	position: relative;
 	width: 544px; /*544px/910px*/
@@ -29,7 +38,7 @@ margin-right: 20px;
 	margin: 0;
 	overflow: hidden;
 	padding: 0;
-	border: 5px solid #666;
+	border: 5px solid rgba(180,180,180, .5);
 	clear: left; 
 }
 
@@ -55,24 +64,28 @@ margin-right: 20px;
 	margin: 0;
 	padding: 15px 0 10px 0;
 	color: #fff;
+	font-family:'Share', Arial, Helvetica, sans-serif;
 	background: url('../images/template/marquee_caption.png') no-repeat 0 0;
 }
 
 .marquee_caption_content {
-	width: 410px;
-	padding: 0px 0px 0px 25px;	
+	width: 430px;
+	padding: 0px 0px 0px 20px;	
 }
 
 .marquee_caption h2 {
-	font-size: 1.25em;
+	font-size: 1.15em;
 	text-transform: uppercase;
-	margin: 15px 0 5px 0;
+	margin: 15px 0px 0px 0px;
 	color: #fff;	
 }
 
 .marquee_caption_content p {
 	margin-bottom: 10px;
 	color: #fff;
+	font: 1.1em/1.2 "Share";
+	position: relative;
+	top: -10px;
 }
 
 .marquee_caption_content a {
@@ -80,7 +93,7 @@ margin-right: 20px;
 }
 
 .marquee_caption_content a:hover {
-	color: #999;
+	color: #0084ff;
 }
 
 .marquee_nav {
