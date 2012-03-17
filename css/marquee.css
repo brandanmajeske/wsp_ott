@@ -2,7 +2,7 @@
 #marquee_header{
 float: right;
 width: 356px;
-margin-right: 20px;
+margin: 25px 20px 0 0;
 }
 
 #marquee_header h1 {

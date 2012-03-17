@@ -45,7 +45,7 @@ body {
 #content, #container {
 	width: 100%;
 	min-height: 500px;
-	background: rgba(50,50,50,.035);
+	background: rgba(50,50,50,.015);
 	padding: 25px 20px 0px 20px;
 }
 
@@ -231,6 +231,7 @@ section {
 }
 
 #special_offers a{
+	margin-bottom: 20px;
 	display: inline-block;
 	height: 20px;
 	width: 90px;
@@ -323,7 +324,10 @@ section {
 
 /*================================= Footer ============================================*/
 
-
+footer {
+	margin: 0;
+	padding: 0;
+}
 
 #footer_container {
 	max-width: 910px;
