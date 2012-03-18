@@ -99,7 +99,7 @@ $(document).ready(function(){
 		
 		// Animate the photos and caption
 		$('.marquee_photos').animate({left: newPhotoPosition}, 900);
-		$('.marquee_caption').animate({top: '300px'}, 500, function(){
+		$('.marquee_caption').animate({top: '310px'}, 750, function(){
 			var newHTML = $(newCaption).html();
 			$('.marquee_caption_content').html(newHTML);
 			setCaption();
@@ -126,6 +126,6 @@ function setCaption(){
 	var captionHeight = $('.marquee_caption').height();
 	var marqueeHeight = $('.marquee_container').height();
 	var newCaptionTop = marqueeHeight - captionHeight - 10;
-	$('.marquee_caption').delay(300).animate({top: newCaptionTop}, 400);
+	$('.marquee_caption').delay(300).animate({top: newCaptionTop}, 750);
 }
 

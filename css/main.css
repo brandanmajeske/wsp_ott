@@ -36,17 +36,15 @@ body {
 	left: -9999px;
 }
 
-#wrapper {
+.wrapper {
 	max-width: 960px;
 	padding: 0 3.125%; /*(30/960px)*/
+	background: rgba(50,50,50,.015);
 	margin: 0 auto;
 }
 
-#content, #container {
+.content, .container {
 	width: 100%;
-	min-height: 500px;
-	background: rgba(50,50,50,.015);
-	padding: 25px 20px 0px 20px;
 }
 
 /*#content h1 {
@@ -60,6 +58,7 @@ body {
 header {
 	height: 75px;
 	width: 100%;
+	margin-bottom: 25px;
 }
 
 #logo_container {
@@ -299,7 +298,6 @@ section {
 
 .service_subsection_secondary {
 	width: 170px;
-	height: 158px;
 	float: left;
 	padding:0px 0px 0px 25px;
 	margin: 20px; 
@@ -327,6 +325,7 @@ section {
 footer {
 	margin: 0;
 	padding: 0;
+	width: 100%;
 }
 
 #footer_container {

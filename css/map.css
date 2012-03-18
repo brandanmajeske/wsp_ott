@@ -1,0 +1,171 @@
+.map_container {
+	background: rgba(1,108,165,.3);
+	height: 600px;
+	padding-top: 10px;
+	border-radius: 16px;
+	border: 1px solid #fff;
+}
+
+.map_content {
+	background: url(../images/florida.png) no-repeat 200px 0px;
+	height: 600px;
+	width: 100%;
+	float: left;
+	position: relative;
+	color: #fff;
+	font-size: .85em;
+	overflow: auto;
+	}
+
+.map_content a.dot {
+	background: url(../images/dots.png) no-repeat 0px 0px;
+	height: 20px;
+	width: 14px;
+	display: block;
+	cursor: pointer;
+	position: absolute;
+}
+
+.map_content a.dot:hover {
+	background-position: 0px -20px;
+}
+
+.map_content a.dot.selected {
+	background-position: 0px -40px;
+}
+
+.map_content .form_service {
+	position: absolute;
+	top: 465px;
+	left: 270px;
+}
+
+.map_content .detail_container {
+	position: absolute;
+	width: 270px;
+	height: 270px;
+	top: 155px;
+	left: 220px;
+}
+
+.map_content .destination_detail {
+	position: relative;
+	top: 0px;
+	width: 270px;
+	padding: 3%;
+	border: 1px solid #000;
+	border-top 1px solid #000;
+	background: #FFFFFF;
+	background: rgba(255,255,255,.85);
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	box-shadow: 2px 2px 2px rgba(50,50,50,.5);
+}
+
+.map_content .destination_detail .destination_photo {
+	float: left;
+	margin: 0px 15px 0px 0px;
+	border: 1px solid #fff;
+	border-radius: 8px;
+	box-shadow: 2px 2px 2px #999;
+	-webkit-box-shadow: 2px 2px 2px #999;
+	-moz-box-shadow: 2px 2px 2px #999;
+	-webkit-border-radius: 8px;
+	color: #333;
+}
+
+.map_content .destination_detail .destination_photo img {
+	width: 75px;
+	height: 75px;
+}
+
+.map_content h2 {
+	margin: 0px;
+	font:normal 1.2em/1.15 Helvetica;
+	color: #999;
+}
+
+.map_content h3 {
+	margin: 0px 0px 12px 0px;
+	font-size: 1em;
+	text-transform: uppercase;
+	color: #016CA5;
+}
+
+.map_content p { 
+	margin: 0px 0px 12px 0px; 
+	color: #000;
+}
+
+.destination_detail_container {
+	display: none;
+}
+/*=============== airport dots ====================*/
+#orlando_international {
+	top: 230px; left: 645px;
+}
+
+#orlando_executive {
+	top: 210px; left: 640px;
+}
+
+#orlando_sanford {
+	top: 190px; left: 642px;
+}
+
+/*=============== attractions dots ================*/
+
+#disney_world {
+	top: 235px; left: 620px;
+}
+
+#universal_studios {
+	top: 236px; left: 635px;
+}
+
+#orlando_science_center {
+	top: 225px; left: 655px;
+}
+
+/*============== convention center dots ===============*/
+
+#orange_county_convention_center {
+	top: 235px; left: 655px;
+}
+
+#peabody_orlando {
+	top: 243px; left: 644px;
+}
+
+#marriott_orlando {
+	top: 185px; left: 653px;
+}
+
+/*=================== port dots ========================*/
+
+#port_canaveral {
+	top: 220px; left: 700px;
+}
+
+#port_tampa {
+	top: 270px; left: 565px
+}
+
+#port_manatee {
+	top: 295px; left: 550px
+}
+
+/*=================== arena dots ========================*/
+
+#amway_arena {
+	top: 230px; left: 645px;
+}
+
+#kissimmee_sports_arena {
+	top: 270px; left: 630px;
+}
+
+#silver_spurs_arena {
+	top: 267px; left: 649px;
+}

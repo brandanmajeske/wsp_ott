@@ -1,54 +1,308 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset='utf-8'>
-<title>Destinations File</title>
-<link rel="stylesheet" href="css/main.css" />
-<link href='http://fonts.googleapis.com/css?family=Share' rel='stylesheet' type='text/css'>
-
-
-</head>
-<body>
-<div id="wrapper">
-
-<header>
-	<nav>
-		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="services.html">Services</a></li>
-			<li><a href="rates.html">Rates</a></li>
-			<li><a href="vehicles.html">Vehicles</a></li>
-			<li><a class="current_page" href="destinations.html">Destinations</a></li>
-			<li><a href="reservations.html">Reservations</a></li>
-		</ul>
-	</nav>
+	<head>
+		<meta charset='utf-8'>
+		<title>Destinations File</title>
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/map.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.min.js"></script>
+		<script type="text/javascript" src="scripts/map.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Share' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<nav>
+					<ul>
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						<li>
+							<a href="services.html">Services</a>
+						</li>
+						<li>
+							<a href="rates.html">Rates</a>
+						</li>
+						<li>
+							<a href="vehicles.html">Vehicles</a>
+						</li>
+						<li>
+							<a class="current_page" href="destinations.html">Destinations</a>
+						</li>
+						<li>
+							<a href="reservations.html">Reservations</a>
+						</li>
+					</ul>
+				</nav>
+				<div id="logo_container">
+					<a id="logo" href="index.html"><img src="images/logo.png" /></a>
+				</div>
+			</header>
+			<div class="container">
+				<div class="map_container">
+				<div class="map_content">
+					<!--airports-->
+					<a class="dot" service="Airports" destination="orlando_international" id="orlando_international"></a>
+					<a class="dot" service="Airports" destination="orlando_executive" id="orlando_executive"></a>
+					<a class="dot" service="Airports" destination="orlando_sanford" id="orlando_sanford"></a>
+					<!--attractions-->
+					<a class="dot" service="Attractions" destination="disney_world" id="disney_world"></a>
+					<a class="dot" service="Attractions" destination="universal_studios" id="universal_studios"></a>
+					<a class="dot" service="Attractions" destination="orlando_science_center" id="orlando_science_center"></a>
+					<!--convention-->
+					<a class="dot" service="Convention_Center" destination="orange_county_convention_center" id ="orange_county_convention_center"></a>
+					<a class="dot" service="Convention_Center" destination="peabody_orlando" id ="peabody_orlando"></a>
+					<a class="dot" service="Convention_Center" destination="marriott_orlando" id ="marriott_orlando"></a>
+					<!--port-->
+					<a class="dot" service="Port" destination="port_canaveral" id ="port_canaveral"></a>
+					<a class="dot" service="Port" destination="port_tampa" id ="port_tampa"></a>
+					<a class="dot" service="Port" destination="port_manatee" id ="port_manatee"></a>
+					<!--arena-->
+					<a class="dot" service="Sports_Arena" destination="amway_arena"  id ="amway_arena"></a>
+					<a class="dot" service="Sports_Arena" destination="kissimmee_sports_arena" id ="kissimmee_sports_arena"></a>
+					<a class="dot" service="Sports_Arena" destination="silver_spurs_arena" id ="silver_spurs_arena"></a>
+					<form id="mapForm" name="mapForm" class="form_service" method="post" action="">
+						<select name="service" id="service">
+							<option value="Airports">Airports</option>
+							<option value="Attractions">Attractions</option>
+							<option value="Convention_Center">Convention Centers</option>
+							<option value="Port">Ports</option>
+							<option value="Sports_Arena">Sports Arenas</option>
+							<option value="ALL" selected="selected">Show All Destinations</option>
+						</select>
+					</form>
+					<div class="detail_container">
+						<div class="destination_detail">
+							<h3>Choose a destination</h3>
+							<p>
+								Select a category from the menu.
+								<br />
+								Click on the map to view the destination details.
+							</p>
+						</div>
+					</div>
+				</div><!-- end map_content-->
+				</div><!--end map_container-->
 	
-	<div id="logo_container">
-	<a id="logo" href="index.html"><img src="images/logo.png" /></a>
-	</div>
-</header>
-<div id="content">
-	
-<h1>This is the body...</h1>
-
-<div id="content_sep">
-	<p>separator line</p>
-</div>
-</div><!--end content -->
-</div><!-- end wrapper -->
-<footer>
-<div id="footer_container">
-	<ul id="footer_nav">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="services.html">Services</a></li>
-			<li><a href="rates.html">Rates</a></li>
-			<li><a href="vehicles.html">Vehicles</a></li>
-			<li><a href="destinations.html">Destinations</a></li>
-			<li><a href="reservations.html">Reservations</a></li>
-		</ul>
-<p id="copyright">&copy;2012 Orlando Tropical Transport</p>
-		
-</div>	
-</footer>
-</body>
+				<div class="destination_detail_container">
+					<!-- airports -->
+					<div class="destination_detail" id="orlando_international">
+						<img class="destination_photo" src="images/destinations/airport.jpg" alt="orlando international" />
+						<div class="destination_info">
+							<h2>Airports</h2>
+							<h3>Orlando International</h3>
+							<p>
+								Info about the airport. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam congue, nisl eu viverra fringilla, velit lectus accumsan dui, a vehicula metus ipsum ut quam. Nunc mattis malesuada diam, at condimentum dui tempus a.
+							</p>
+						</div>
+					</div>
+					<div class="destination_detail" id="orlando_sanford">
+						<img class="destination_photo" src="images/destinations/airport.jpg" alt="orlando sanford" />
+						<div class="destination_info">
+							<h2>Airports</h2>
+							<h3>Orlando Sanford</h3>
+							<p>
+								Pellentesque nibh felis, eleifend id, commodo in, interdum vitae, leo. Praesent eu elit. Ut eu ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos commodo in interdum vitae leo.
+							</p>
+						</div>
+					</div>
+					<div class="destination_detail" id="orlando_executive">
+						<img class="destination_photo" src="images/destinations/airport.jpg" alt="orlando executive" />
+						<div class="destination_info">
+							<h2>Airports</h2>
+							<h3>Orlando Executive</h3>
+							<p>
+								Pellentesque nibh felis, eleifend id, commodo in, interdum vitae, leo. Praesent eu elit. Ut eu ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos commodo in interdum vitae leo.
+							</p>
+						</div>
+					</div>
+					<!-- end airports -->
+					<!-- attractions -->
+					<div class="destination_detail" id="disney_world">
+						<img class="destination_photo" src="images/destinations/disneyworld.jpg" alt="disney world" />
+						<div class="destination_info">
+							<h2>Attractions</h2>
+							<h3>Disney World</h3>
+							<p>
+								Pellentesque nibh felis, eleifend id, commodo in, interdum vitae, leo. Praesent eu elit. Ut eu ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos commodo in interdum vitae leo.
+							</p>
+						</div>
+					</div>
+					<div class="destination_detail" id="universal_studios">
+						<img class="destination_photo" src="images/destinations/universal_studios.jpg" alt="universal studios" />
+						<div class="destination_info">
+							<h2>Attractions</h2>
+							<h3>Universal Studios</h3>
+							<p>
+								Pellentesque nibh felis, eleifend id, commodo in, interdum vitae, leo. Praesent eu elit. Ut eu ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos commodo in interdum vitae leo.
+							</p>
+						</div>
+					</div>
+					<div class="destination_detail" id="orlando_science_center">
+						<img class="destination_photo" src="images/destinations/orlando_science_center.jpg" alt="orlando science center" />
+						<div class="destination_info">
+							<h2>Attractions</h2>
+							<h3>Orlando Science Center</h3>
+							<p>
+								Info about the airport. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam congue, nisl eu viverra fringilla, velit lectus accumsan dui, a vehicula metus ipsum ut quam. Nunc mattis malesuada diam, at condimentum dui tempus a.
+							</p>
+						</div>
+					</div>
+					<!--end attractions -->
+					<!-- conventions -->
+					<div class="destination_detail" id="orange_county_convention_center">
+						<img class="destination_photo" src="images/destinations/orange_county_convention_center.jpg" alt="orange county convention center" />
+						<div class="destination_info">
+							<h2>Convention Centers</h2>
+							<h3>Orange County Convention Center</h3>
+							<p>
+								Info about the Orange County Convention Center. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam congue, nisl eu viverra fringilla, velit lectus accumsan dui, a vehicula metus ipsum ut quam. Nunc mattis malesuada diam, at condimentum dui tempus a.
+							</p>
+						</div>
+					</div>
+					<div class="destination_detail" id="peabody_orlando">
+						<img class="destination_photo" src="images/destinations/peabody_orlando.jpg" alt="peabody orlando" />
+						<div class="destination_info">
+							<h2>Convention Centers</h2>
+							<h3>The Peabody Hotel</h3>
+							<p>
+								Info about the The Peabody Hotel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam congue, nisl eu viverra fringilla, velit lectus accumsan dui, a vehicula metus ipsum ut quam. Nunc mattis malesuada diam, at condimentum dui tempus a.
+							</p>
+						</div>
+					</div>
+					<div class="destination_detail" id="marriott_orlando">
+						<img class="destination_photo" src="images/destinations/marriott_orlando.jpg" alt="marriott orlando" />
+						<div class="destination_info">
+							<h2>Convention Centers</h2>
+							<h3>Orlando World Center Marriott</h3>
+							<p>
+								Info about the The Peabody Hotel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam congue, nisl eu viverra fringilla, velit lectus accumsan dui, a vehicula metus ipsum ut quam. Nunc mattis malesuada diam, at condimentum dui tempus a.
+							</p>
+						</div>
+					</div>
+					<!-- end convention -->
+					<!-- ports -->
+					<div class="destination_detail" id="port_canaveral">
+						<img class="destination_photo" src="images/destinations/port_canaveral.jpg" alt="port canaveral" />
+						<div class="destination_info">
+							<h2>Ports</h2>
+							<h3>Port Canaveral</h3>
+							<p>
+								Info about the Port Canaveral, Florida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam congue, nisl eu viverra fringilla, velit lectus accumsan dui, a vehicula metus ipsum ut quam. Nunc mattis malesuada diam, at condimentum dui tempus a.
+							</p>
+						</div>
+					</div>
+					<div class="destination_detail" id="port_tampa">
+						<img class="destination_photo" src="images/destinations/port_tampa.jpg" alt="port tampa" />
+						<div class="destination_info">
+							<h2>Ports</h2>
+							<h3>Port Tampa</h3>
+							<p>
+								Info about the Port Canaveral, Florida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam congue, nisl eu viverra fringilla, velit lectus accumsan dui, a vehicula metus ipsum ut quam. Nunc mattis malesuada diam, at condimentum dui tempus a.
+							</p>
+						</div>
+					</div>
+					<div class="destination_detail" id="port_manatee">
+						<img class="destination_photo" src="images/destinations/port_manatee.jpg" alt="port manatee" />
+						<div class="destination_info">
+							<h2>Ports</h2>
+							<h3>Port Manatee</h3>
+							<p>
+								Info about the Port Canaveral, Florida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam congue, nisl eu viverra fringilla, velit lectus accumsan dui, a vehicula metus ipsum ut quam. Nunc mattis malesuada diam, at condimentum dui tempus a.
+							</p>
+						</div>
+					</div>
+					<!-- end ports -->
+					<!-- arenas -->
+					<div class="destination_detail" id="amway_arena">
+						<img class="destination_photo" src="images/destinations/amway_arena.jpg" alt="amway arena" />
+						<div class="destination_info">
+							<h2>Arenas</h2>
+							<h3>Amway Arena</h3>
+							<p>
+								Info about the Amway Arena, Florida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam congue, nisl eu viverra fringilla, velit lectus accumsan dui, a vehicula metus ipsum ut quam. Nunc mattis malesuada diam, at condimentum dui tempus a.
+							</p>
+						</div>
+					</div>
+					<div class="destination_detail" id="kissimmee_sports_arena">
+						<img class="destination_photo" src="images/destinations/kissimmee_sports_arena.jpg" alt="kissimmee sports arena" />
+						<div class="destination_info">
+							<h2>Arenas</h2>
+							<h3>Kissimmee Sports Arena</h3>
+							<p>
+								Info about the Kissimmee Sports Arena, Florida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam congue, nisl eu viverra fringilla, velit lectus accumsan dui, a vehicula metus ipsum ut quam. Nunc mattis malesuada diam, at condimentum dui tempus a.
+							</p>
+						</div>
+					</div>
+					<div class="destination_detail" id="silver_spurs_arena">
+						<img class="destination_photo" src="images/destinations/silver_spurs_arena.jpg" alt="silver spurs arena" />
+						<div class="destination_info">
+							<h2>Arenas</h2>
+							<h3>Silver Spurs Arena</h3>
+							<p>
+								Info about the Port Canaveral, Florida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam congue, nisl eu viverra fringilla, velit lectus accumsan dui, a vehicula metus ipsum ut quam. Nunc mattis malesuada diam, at condimentum dui tempus a.
+							</p>
+						</div>
+					</div><!-- end arenas -->
+				</div><!--end content -->
+			</div><!-- end wrapper -->
+			<br class="clearfix"/>
+			<section id="service_descriptions">
+				<div class="service_subsection_secondary">
+					<h3>Punctual</h3>
+					<p>
+						Most travel time is under 30 minutes in duration.
+					</p>
+				</div>
+				<div class="service_subsection_secondary divider">
+					<h3>Professional</h3>
+					<p>
+						Our chauffeurs and service representatives are courteous and ready to help.
+					</p>
+				</div>
+				<div class="service_subsection_secondary divider">
+					<h3>Luxurious</h3>
+					<p>
+						All of our vehicles are nicely equipped, clean and include radios and GPS tracking.
+					</p>
+				</div>
+				<div class="service_subsection_secondary divider">
+					<h3>Need a Quote?</h3>
+					<p>
+						Call our friendly customer service staff at <strong>407-855-4600</strong>!
+					</p>
+				</div>
+			</section>
+		</div><!--end container -->
+		</div> </div><!-- end wrapper -->
+		<footer>
+			<div id="footer_container">
+				<div id="footer_nav_container">
+					<ul id="footer_nav">
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						<li>
+							<a href="services.html">Services</a>
+						</li>
+						<li>
+							<a href="rates.html">Rates</a>
+						</li>
+						<li>
+							<a href="vehicles.html">Vehicles</a>
+						</li>
+						<li>
+							<a href="destinations.html">Destinations</a>
+						</li>
+						<li>
+							<a href="reservations.html">Reservations</a>
+						</li>
+					</ul>
+				</div>
+				<p id="copyright">
+					&copy;2012 Orlando Tropical Transport
+				</p>
+			</div>
+		</footer>
+	</body>
 </html>
