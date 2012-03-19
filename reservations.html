@@ -1,53 +1,123 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset='utf-8'>
-<title>Reservations File</title>
-<link rel="stylesheet" href="css/main.css" />
-<link href='http://fonts.googleapis.com/css?family=Share' rel='stylesheet' type='text/css'>
+	<head>
+		<meta charset='utf-8'>
+		<title>Reservations</title>
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/form.css" />
+		<link href='http://fonts.googleapis.com/css?family=Share' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="scripts/modernizr-2.5.3.js"></script>
+		<script type="text/javascript" src="scripts/form.js"></script>
+		<script type="text/javascript" src="scripts/spinner.js"></script>
+		<script type="text/javascript" src="scripts/webforms2.js"></script>
+		<script type="text/javascript" src="scripts/jquery.ui.spinner.js"></script>
 
-
-</head>
-<body>
-<div id="wrapper">
-
-<header>
-	<nav>
-		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="services.html">Services</a></li>
-			<li><a href="rates.html">Rates</a></li>
-			<li><a href="vehicles.html">Vehicles</a></li>
-			<li><a href="destinations.html">Destinations</a></li>
-			<li><a class="current_page" href="reservations.html">Reservations</a></li>
-		</ul>
-	</nav>
-	
-	<div id="logo_container">
-	<a id="logo" href="index.html"><img src="images/logo.png" /></a>
-	</div>
-</header>
-<div id="content">
-<h1>This is the body...</h1>
-
-<div id="content_sep">
-	<p>separator line</p>
-</div>
-</div><!--end content -->
-</div><!-- end wrapper -->
-<footer>
-<div id="footer_container">
-	<ul id="footer_nav">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="services.html">Services</a></li>
-			<li><a href="rates.html">Rates</a></li>
-			<li><a href="vehicles.html">Vehicles</a></li>
-			<li><a href="destinations.html">Destinations</a></li>
-			<li><a href="reservations.html">Reservations</a></li>
-		</ul>
-<p id="copyright">&copy;2012 Orlando Tropical Transport</p>
-		
-</div>	
-</footer>
-</body>
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<nav>
+					<ul>
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						<li>
+							<a href="services.html">Services</a>
+						</li>
+						<li>
+							<a href="rates.html">Rates</a>
+						</li>
+						<li>
+							<a href="vehicles.html">Vehicles</a>
+						</li>
+						<li>
+							<a href="destinations.html">Destinations</a>
+						</li>
+						<li>
+							<a class="current_page" href="reservations.html">Reservations</a>
+						</li>
+					</ul>
+				</nav>
+				<div id="logo_container">
+					<a id="logo" href="index.html"><img src="images/logo.png" /></a>
+				</div>
+			</header>
+			<h1 id="form_header">Reserve your ride today!</h1>
+			<div class="container">
+				<div id="form_container">
+					<form id="reservation_form' method="POST" action="">
+						<div>
+							<label for="name">Name</label>
+							<input type="text" name="name_first" id="name_first" placeholder="First Name" autofocus required/>
+							<input type="text" name="name_last" id="name_last" placeholder="Last Name" required />
+						</div>
+						<div>
+							<label for="email">Email</label>
+							<input type="email" name="email" id="email" placeholder="example@example.com"/>
+						</div>
+						<div>
+							<label for="phone">Phone</label>
+							<input type="tel" name="phone" id="phone" placeholder="555-555-1212" pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$" required />
+						</div>
+						<div>
+							<label for="datepicker">Pickup Date</label>
+							<input type="text" name="pickup_date" id="datepicker" required/>
+						</div>	
+						<div>
+							<label for="pickup_time">Pickup Time</label>
+							<input type="time" name="pickup_time" id="pickup_time" value="06:00" required/>
+						</div>	
+										
+							<select name="vehicle">
+								<option>Airport Shuttle</option>
+								<option>Taxi</option>
+								<option>SUV</option>
+								<option>Sedan</option>
+								<option>Limousine</option>
+								<option>Party Bus</option>
+								<option>Charter</option>
+							</select>
+						<div>
+						<label for="passenger_count">Passengers</label>
+						<input type="number" name="passenger_count" id="passenger_count" min="1" max="10" value="1"/>
+						</div>
+						<input name="submit" type="submit" value="submit" />	
+						</div>
+					</form>
+				</div>
+			</div><!--end container -->
+		</div><!-- end wrapper -->
+		<footer>
+			<div id="footer_container">
+				<ul id="footer_nav">
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="services.html">Services</a>
+					</li>
+					<li>
+						<a href="rates.html">Rates</a>
+					</li>
+					<li>
+						<a href="vehicles.html">Vehicles</a>
+					</li>
+					<li>
+						<a href="destinations.html">Destinations</a>
+					</li>
+					<li>
+						<a href="reservations.html">Reservations</a>
+					</li>
+				</ul>
+				<p id="copyright">
+					&copy;2012 Orlando Tropical Transport
+				</p>
+			</div>
+		</footer>
+	</body>
 </html>

@@ -13,7 +13,6 @@
 	float: left;
 	position: relative;
 	color: #fff;
-	font-size: .85em;
 	overflow: auto;
 	}
 
@@ -65,7 +64,7 @@
 
 .map_content .destination_detail .destination_photo {
 	float: left;
-	margin: 0px 15px 0px 0px;
+	margin: 0px 15px 15px 0px;
 	border: 1px solid #fff;
 	border-radius: 8px;
 	box-shadow: 2px 2px 2px #999;
@@ -80,22 +79,27 @@
 	height: 75px;
 }
 
-.map_content h2 {
+.destination_info h2 {
 	margin: 0px;
-	font:normal 1.2em/1.15 Helvetica;
-	color: #999;
-}
-
-.map_content h3 {
-	margin: 0px 0px 12px 0px;
-	font-size: 1em;
+	font:bold 1.1em/1.25 'Share';
 	text-transform: uppercase;
-	color: #016CA5;
+	color: #999;
+	text-shadow: 0px 1px 0px #fff;
 }
 
-.map_content p { 
+.destination_info h3 {
+	margin: 0px 0px 12px 0px;
+	font:bold 1.5em'Ropa Sans' Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	color: #0084ff;
+	text-shadow: 0px 1px 0px #fff;
+}
+
+.map_content, .destination_info p { 
 	margin: 0px 0px 12px 0px; 
-	color: #000;
+	color: #222;
+	clear: both;
+	font: 1.2em/1.2 'Ropa Sans' Arial, Helvetica, sans-serif;
 }
 
 .destination_detail_container {

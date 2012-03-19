@@ -1,0 +1,33 @@
+/*=== Form CSS ===*/
+
+#form_container {
+	background: rgba(1,108,165,.3);
+	height: 600px;
+	padding-top: 10px;
+	border-radius: 16px;
+	border: 1px solid #fff;
+	margin-bottom: 25px;
+	box-shadow: 0px 2px 5px rgba(50,50,50,.5);
+}
+
+#form_header {
+	position: relative;
+	bottom: -20px;
+	color: #0084ff;
+	text-shadow: 1px 1px 0px #fff;
+}
+
+:invalid {
+	background: #ffdddd;
+}
+:valid {
+	background: #ebebeb;
+}
+
+:required {
+	border: 1px solid rgba(100,255,10,.25);
+}
+
+#daatepicker {
+	display: block;
+}

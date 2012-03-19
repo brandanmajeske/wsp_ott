@@ -45,6 +45,7 @@ body {
 
 .content, .container {
 	width: 100%;
+	margin-top: 25px;
 }
 
 /*#content h1 {
@@ -58,7 +59,6 @@ body {
 header {
 	height: 75px;
 	width: 100%;
-	margin-bottom: 25px;
 }
 
 #logo_container {
