@@ -81,7 +81,7 @@
 
 .destination_info h2 {
 	margin: 0px;
-	font:bold 1.1em/1.25 'Share';
+	font:bold 1em/1.25 'Share-Regular';
 	text-transform: uppercase;
 	color: #999;
 	text-shadow: 0px 1px 0px #fff;
@@ -89,7 +89,7 @@
 
 .destination_info h3 {
 	margin: 0px 0px 12px 0px;
-	font:bold 1.5em'Ropa Sans' Arial, Helvetica, sans-serif;
+	font:bold .9em/1.2'RopaSansRegular' Arial, Helvetica, sans-serif;
 	text-transform: uppercase;
 	color: #0084ff;
 	text-shadow: 0px 1px 0px #fff;
@@ -99,7 +99,7 @@
 	margin: 0px 0px 12px 0px; 
 	color: #222;
 	clear: both;
-	font: 1.2em/1.2 'Ropa Sans' Arial, Helvetica, sans-serif;
+	font: 1em/1.2 'RopaSansRegular' Arial, Helvetica, sans-serif;
 }
 
 .destination_detail_container {

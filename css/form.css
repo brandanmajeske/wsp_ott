@@ -2,32 +2,272 @@
 
 #form_container {
 	background: rgba(1,108,165,.3);
-	height: 600px;
-	padding-top: 10px;
+	width: 75%;
+	overflow: auto;
 	border-radius: 16px;
 	border: 1px solid #fff;
-	margin-bottom: 25px;
 	box-shadow: 0px 2px 5px rgba(50,50,50,.5);
+	padding: 20px;
+	text-shadow: 0px 1px 0px #fff;
+	margin: 0 auto 25px auto;
 }
 
 #form_header {
 	position: relative;
 	bottom: -20px;
+	left: 100px;
 	color: #0084ff;
 	text-shadow: 1px 1px 0px #fff;
 }
 
+.cta {
+	float: right;
+	width: 50%;
+}
+
+#agent_image_container {
+	width: 100%;
+	margin: 0 auto;
+}
+
+#agent_image {
+	margin: 25px 0px 25px 25px;
+}
+
+#agent_image h3 {
+	margin-bottom: 0px;
+}
+
+#agent_image p {
+	position: relative;
+	top: -15px;
+}
+
+.cta img {
+	margin: 0 auto;
+	max-width: 100%;
+	border-radius: 5px;
+	box-shadow: 1px 1px 5px #999;
+}
+
+form {
+	float: left;
+	width: 50%;
+	font: 1.2em/1.4 'RopaSansRegular', 'Ropa Sans', Arial, sans-serif;
+}
+
 :invalid {
-	background: #ffdddd;
+	background: #FFF2F2;
+	border: 1px solid #BA0000;
 }
 :valid {
-	background: #ebebeb;
+	background: #fff;
+	border: 1px solid #67D669;
 }
 
 :required {
-	border: 1px solid rgba(100,255,10,.25);
+	background: #FFFFF0;
 }
 
-#daatepicker {
-	display: block;
+label {
+	float: left;
+	clear: left;
+	color: #555;
+	padding-top: 2%;
+	font-size: 1.25em!important;
 }
+
+input {
+	width: 300px;
+	color: rgb(79,17,25);
+	font: .85em/1.5 Arial, Helvetica, sans-serif;
+}
+
+#vehicle {
+	float: left;
+	clear: left;
+	margin-top: 25px;
+}
+
+#submit_button {
+	margin-top: 25px;
+	width: 150px;
+	height: 50px;
+}
+
+.name label{
+	float: left;
+	clear: left;
+}
+
+.name input#name_first {
+	width: 150px;
+	float: left;
+	display: inline;
+	clear: left;
+	
+}
+
+.name input#name_last {
+	width: 150px;
+	float: left;
+	margin-left: 15px;
+	
+}
+
+.email input {
+	width: 315px;
+	float: left;
+	clear: left;
+}
+
+.phone input {
+	width: 315px;
+	float: left;
+	clear: left;
+}
+
+.date_time label {
+	float: left;
+}
+
+.date_time label#time_label {
+	float: left;
+	clear: none!important;
+	margin-left: 67px;
+}
+
+.date_time input#datepicker{
+	width: 150px;
+	float: left;
+	display: inline;
+	clear: left;
+}
+
+.date_time input#pickup_time {
+	width: 150px;
+	float: left;
+	margin-left: 15px;
+	
+}
+
+.trip {
+	float: left;
+	clear: left;
+	display: inline;
+}
+
+.trip input {
+	display: inline;
+	width: 20px;
+	margin: 10px 10px 10px 0px;
+	vertical-align: middle;
+}
+
+.trip ul {
+	position: relative;
+	left: -45px;
+	list-style: none;
+	margin: 5px 0px 0px 0px;
+}
+
+.trip ul li {
+	display: inline-block;
+	margin: 0 35px 0 0;
+	list-style-type: none;
+	list-style-position: inside;
+}
+
+.trip label {
+	vertical-align: bottom;
+	padding-left: 2px;
+}
+.locations {
+	float: left;
+	clear: left;
+}
+
+.locations label {
+	float: left;
+	clear: left;
+}
+
+.locations input {
+	width: 315px;
+	float: left;
+	clear: left;
+}
+
+#from_to_suggestions {
+	display: none;
+}
+
+#passenger_count input{
+	float: left;
+	clear: left;
+	width: 150px;
+}
+
+#vehicle {
+	float: left;
+
+}
+
+select {
+	width: 150px;
+	font: .9em Arial, Helvetica, sans-serif;
+}
+
+#submit_button {
+	float: left;
+	clear: left;
+	margin-bottom: 20px;
+	display: inline-block;
+	height: 40px;
+	width: 100px;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 5px;
+	font: .75em Arial, Helvetica, sans-serif;
+	color: #fff;
+	text-shadow: 0px 1px 0px rgba(50,50,50,1);
+	border: 1px solid rgba(50,50,50,.5);
+	border-radius: 15px;
+	text-decoration: none;
+	background-color: #329334;
+	background-image: linear-gradient(bottom, #20451C 7%, #329334 45%, #5BB1AB 95%);
+	background-image: -o-linear-gradient(bottom, #20451C 7%, #329334 45%, #5BB1AB 95%);
+	background-image: -moz-linear-gradient(bottom, #20451C 7%, #329334 45%, #5BB1AB 95%);
+	background-image: -webkit-linear-gradient(bottom, #20451C 7%, #329334 45%, #5BB1AB 95%);
+	background-image: -ms-linear-gradient(bottom, #20451C 7%, #329334 45%, #5BB1AB 95%);
+
+	background-image: -webkit-gradient(
+	linear,	left bottom, left top,
+	color-stop(0.095, #20451C),
+	color-stop(0.45, #329334),
+	color-stop(0.77, #5BB1AB));
+}
+
+#submit_button:hover {
+	box-shadow: 0px 0px 4px #20451C;
+}
+
+#submit_button:active {
+	text-decoration: none;
+	background-image: linear-gradient(top, #20451C 7%, #329334 45%, #5BB1AB 95%);
+	background-image: -o-linear-gradient(top, #20451C 7%, #329334 45%, #5BB1AB 95%);
+	background-image: -moz-linear-gradient(top, #20451C 7%, #329334 45%, #5BB1AB 95%);
+	background-image: -webkit-linear-gradient(top, #20451C 7%, #329334 45%, #5BB1AB 95%);
+	background-image: -ms-linear-gradient(top, #20451C 7%, #329334 45%, #5BB1AB 95%);
+
+	background-image: -webkit-gradient(
+	linear,	left top, left bottom,
+	color-stop(0.095, #20451C),
+	color-stop(0.45, #329334),
+	color-stop(0.77, #5BB1AB));
+
+}
+	
+=====================  Customer Service Agent Div ====================
+
+

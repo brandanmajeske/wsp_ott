@@ -11,13 +11,41 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'RopaSansRegular';
+    src: url('../font/RopaSans-Regular-webfont.eot');
+    src: url('../font/RopaSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/RopaSans-Regular-webfont.woff') format('woff'),
+         url('../font/RopaSans-Regular-webfont.ttf') format('truetype'),
+         url('../font/RopaSans-Regular-webfont.svg#RopaSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Share-Regular';
+    src: url('../font/Share-Regular-webfont.eot');
+    src: url('../font/Share-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Share-Regular-webfont.woff') format('woff'),
+         url('../font/Share-Regular-webfont.ttf') format('truetype'),
+         url('../font/Share-Regular-webfont.svg#Share-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 .clearfix {
 	clear: both;
 }
 
+a img {
+	border: none;
+}
+
 body {
 	background: url('../images/bg.png') repeat-x;
-	font-family:'Ropa Sans', Arial, Helvetica, sans-serif;
+	font-family:'RopaSansRegular', Arial, Helvetica, sans-serif;
 	color: #333;
 	width: 100%;
 	margin: 0;
@@ -48,13 +76,6 @@ body {
 	margin-top: 25px;
 }
 
-/*#content h1 {
-	color: #333;
-	margin: 0;
-	text-shadow: 0px 1px 0px #fff;
-	font-family: 'ChunkFiveRegular';
-}*/
-
 
 header {
 	height: 75px;
@@ -75,7 +96,7 @@ header {
 nav {
 	height: 75px;
 	float: right;
-	width: 73.2%; /*735px/910px*/
+	width: 74%; /*735px/910px*/
 	text-transform: uppercase;
 }
 
@@ -84,7 +105,7 @@ nav ul li {
 	display: block;
 	float: left;
 	list-style: none;
-	font: 1.2em/1.5 'Share';
+	font: 1.2em/1.5 'Share-Regular', 'Share', Arial;
 	margin-top: 10px;
 	margin-left: 2.7210884%; /*20/735px*/
 	text-shadow: 1px 1px 0px #999;
@@ -243,6 +264,7 @@ section {
 	border: 1px solid rgba(50,50,50,.5);
 	border-radius: 15px;
 	text-decoration: none;
+	background-color: #329334;
 	background-image: linear-gradient(bottom, #20451C 7%, #329334 45%, #5BB1AB 95%);
 	background-image: -o-linear-gradient(bottom, #20451C 7%, #329334 45%, #5BB1AB 95%);
 	background-image: -moz-linear-gradient(bottom, #20451C 7%, #329334 45%, #5BB1AB 95%);
@@ -279,7 +301,7 @@ section {
 /*================================= Page 1 Sub Section 2 ============================================*/
 
 #service_descriptions {
-	background: #f5f5f5;
+	background-color: silver;
 	border: 1px groove rgba(50,50,50,.5);
 	box-shadow: 0px -2px 4px rgba(50,50,50,.25);
 	
@@ -365,6 +387,7 @@ footer {
 
 #footer_nav li a:visited{
 	color: #fff;
+	opacity: .5;
 
 }
 

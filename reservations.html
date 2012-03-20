@@ -5,7 +5,7 @@
 		<title>Reservations</title>
 		<link rel="stylesheet" href="css/main.css" />
 		<link rel="stylesheet" type="text/css" href="css/form.css" />
-		<link href='http://fonts.googleapis.com/css?family=Share' rel='stylesheet' type='text/css'>
+		<link type="text/css" href="css/ui-lightness/jquery-ui-1.8.18.custom.css" rel="stylesheet" />   
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.min.js"></script>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="scripts/modernizr-2.5.3.js"></script>
@@ -14,6 +14,7 @@
 		<script type="text/javascript" src="scripts/webforms2.js"></script>
 		<script type="text/javascript" src="scripts/jquery.ui.spinner.js"></script>
 
+		
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -49,45 +50,104 @@
 			</header>
 			<h1 id="form_header">Reserve your ride today!</h1>
 			<div class="container">
+					
+			
+								
+				</div><!-- end cta -->
 				<div id="form_container">
+					<section class="cta">
+					<div id="agent_image_container">
+						<div id="agent_image">
+							<img src="images/photos/csa.jpg"/>
+							<h3>Rates</h3>
+							<p>Our rates vary based on destination, passenger count and type of vehicle. <br />
+								Please see our <a href="rates.html">Rates</a> page for details on pricing.
+							</p>
+							<h3>Contact</h3>
+							<p>Do you have a question or comment for us? <br />
+								Please contact us anytime! <a href="<a mailto:example@example.com?subject=feedback">Contact Form</a>
+							</p>
+						</div>
+					</section>
 					<form id="reservation_form' method="POST" action="">
-						<div>
+						<div class="name">
 							<label for="name">Name</label>
 							<input type="text" name="name_first" id="name_first" placeholder="First Name" autofocus required/>
 							<input type="text" name="name_last" id="name_last" placeholder="Last Name" required />
 						</div>
-						<div>
+						<div class="email">
 							<label for="email">Email</label>
-							<input type="email" name="email" id="email" placeholder="example@example.com"/>
+							<input type="email" name="email" id="email" placeholder="example@example.com" required/>
 						</div>
-						<div>
+						<div class="phone">
 							<label for="phone">Phone</label>
 							<input type="tel" name="phone" id="phone" placeholder="555-555-1212" pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$" required />
 						</div>
-						<div>
-							<label for="datepicker">Pickup Date</label>
-							<input type="text" name="pickup_date" id="datepicker" required/>
+						<div class="date_time">
+							<label for="datepicker">Pick-up Date</label>
+							<label for="time" id="time_label">Time</label>
+							<input type="text" name="datepicker" id="datepicker" min="2012-03-18" required/>
+							<input type="time" name="pickup_time" id="pickup_time" value="06:00 AM" required/>
 						</div>	
-						<div>
-							<label for="pickup_time">Pickup Time</label>
-							<input type="time" name="pickup_time" id="pickup_time" value="06:00" required/>
+						
+						<div class="trip">
+							<ul>
+								<li>
+								<label id="round_trip_label">
+								<input type="checkbox" name="round_trip" id="round_trip_button" />
+								Round Trip</label></li> 
+								<li><label id="one_way_label">
+								<input type="checkbox" name="one_way" id="one_way_button" />One-Way</label></li>
+								
+							</ul>
+						</div>
+						
+						<div class="locations">
+							<label for="from_location" id="from_label">Pick-up Location</label>
+							<input id="from" name ="from_location" type="text" list="from_to_suggestions" title="Please enter the location you would like to be picked up from."/>
+							<label for="from_location" id="from_label">Drop-off Location</label>
+							<input id="to" name="to_location" type="text" list="from_to_suggestions" title="Please enter the location you would like as your destination."/>
+														
+							<datalist id="from_to_suggestions">
+								<option>Orlando Sanford Airport</option>
+								<option>Orlando Executive Airport</option>
+								<option>Orlando International Airport</option>
+								<option>Orlando Science Center</option>
+								<option>Disney World Resort</option>
+								<option>Universal Orlando Resort</option>
+								<option>Orange County Convention Center</option>
+								<option>Moarriott's Orlando World Center</option>
+								<option>The Peabody Orlando</option>
+								<option>Port of Tampa</option>
+								<option>Port Canaveral</option>
+								<option>Port Manatee</option>
+								<option>Amway Center</option>
+								<option>Kissimmee Sports Arena</option>
+								<option>Silver Spurs Arena</option>
+							</datalist>
 						</div>	
-										
-							<select name="vehicle">
+						<div id="passenger_count">
+							<label>Passengers</label>
+							<input type="number" name="passenger_count" min="1" max="50" value="1" required />
+						</div>								
+					
+					
+						
+
+							<select id ="vehicle" name="vehicle">
 								<option>Airport Shuttle</option>
 								<option>Taxi</option>
 								<option>SUV</option>
 								<option>Sedan</option>
 								<option>Limousine</option>
 								<option>Party Bus</option>
-								<option>Charter</option>
+								<option>Charter Bus</option>
 							</select>
-						<div>
-						<label for="passenger_count">Passengers</label>
-						<input type="number" name="passenger_count" id="passenger_count" min="1" max="10" value="1"/>
+
+						<input id="submit_button" name="submit" type="submit" value="submit" />	
 						</div>
-						<input name="submit" type="submit" value="submit" />	
-						</div>
+	
+
 					</form>
 				</div>
 			</div><!--end container -->
