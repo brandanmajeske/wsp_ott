@@ -134,7 +134,7 @@ input {
 .date_time label#time_label {
 	float: left;
 	clear: none!important;
-	margin-left: 67px;
+	margin-left: 45px;
 }
 
 .date_time input#datepicker{
