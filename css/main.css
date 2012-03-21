@@ -87,6 +87,8 @@ table {
 	clear: both;
 }
 
+
+
 a img {
 	border: none;
 }
@@ -229,6 +231,19 @@ nav li a.current_page:link, nav li a.current_page:visited {
 	overflow: auto;
 }*/
 
+.service_subsection a:link, .service_subsection a:visited {
+	color: #0084FF;	
+}
+
+.service_subsection a:hover {
+	color: #555555;
+}
+
+.service_subsection a:active {
+	color: #000000;
+}
+
+
 .section_seperator {
 	width: 100%;
 	overflow: auto;
@@ -236,10 +251,9 @@ nav li a.current_page:link, nav li a.current_page:visited {
 
 .service_subsection {
 	width: 36.2637363%; /*330px/910px*/
-	height: 250px;
 	float: left;
 	border-right: 2px groove rgba(0,0,0,.2);
-	padding-right: 5px;
+	padding: 0px 5px 10px 0px;
 	margin-right: 20px;
 }
 
@@ -295,53 +309,18 @@ nav li a.current_page:link, nav li a.current_page:visited {
 	width: 205px;
 }
 
-#special_offers a{
-	margin-top: 15px;
-	display: inline-block;
-	height: 20px;
-	width: 90px;
-	text-align: center;
-	text-transform: uppercase;
-	padding: 5px 5px 0px 5px;
-	font: .75em Arial, Helvetica, sans-serif;
-	color: #fff;
-	text-shadow: 0px 1px 0px rgba(50,50,50,1);
-	border: 1px solid rgba(50,50,50,.5);
-	border-radius: 15px;
-	text-decoration: none;
-	background-color: #329334;
-	background-image: linear-gradient(bottom, #20451C 7%, #329334 45%, #5BB1AB 95%);
-	background-image: -o-linear-gradient(bottom, #20451C 7%, #329334 45%, #5BB1AB 95%);
-	background-image: -moz-linear-gradient(bottom, #20451C 7%, #329334 45%, #5BB1AB 95%);
-	background-image: -webkit-linear-gradient(bottom, #20451C 7%, #329334 45%, #5BB1AB 95%);
-	background-image: -ms-linear-gradient(bottom, #20451C 7%, #329334 45%, #5BB1AB 95%);
-
-	background-image: -webkit-gradient(
-	linear,	left bottom, left top,
-	color-stop(0.095, #20451C),
-	color-stop(0.45, #329334),
-	color-stop(0.77, #5BB1AB));
-	}
+#special_offers a:link, #special_offers a:visited{
+	font: .9em/1.4 Arial, Helvetica, sans-serif;
+	color: #0084FF;
+}
 
 #special_offers a:hover {
-	box-shadow: 0px 0px 4px #20451C;
+	color: #555555;
 }
 
 #special_offers a:active {
-	text-decoration: none;
-	background-image: linear-gradient(top, #20451C 7%, #329334 45%, #5BB1AB 95%);
-	background-image: -o-linear-gradient(top, #20451C 7%, #329334 45%, #5BB1AB 95%);
-	background-image: -moz-linear-gradient(top, #20451C 7%, #329334 45%, #5BB1AB 95%);
-	background-image: -webkit-linear-gradient(top, #20451C 7%, #329334 45%, #5BB1AB 95%);
-	background-image: -ms-linear-gradient(top, #20451C 7%, #329334 45%, #5BB1AB 95%);
-
-	background-image: -webkit-gradient(
-	linear,	left top, left bottom,
-	color-stop(0.095, #20451C),
-	color-stop(0.45, #329334),
-	color-stop(0.77, #5BB1AB));
-
-	}
+	color: #000;
+}
 
 /*================================= Page 1 Sub Section 2 ============================================*/
 
@@ -475,7 +454,7 @@ footer {
 	box-shadow: 0px 2px 5px rgba(50,50,50,.5);
 	padding: 3%;
 	text-shadow: 0px 1px 0px #fff;
-	margin: 0 auto 25px auto;
+	margin: 0 auto 15px auto;
 }
 
 #form_header {
@@ -536,7 +515,7 @@ form#reservation_form {
 }
 :valid {
 	background: #fff;
-	border: 1px solid #67D669;
+	border: 1px solid #0084ff;
 }
 
 :required {
@@ -635,7 +614,8 @@ input {
 
 .trip input {
 	display: inline;
-	margin: 10px 10px 10px 0px;
+	margin: 10px 20px 10px 0px;
+	padding-bottom: 2px;
 	vertical-align: top;
 }
 
@@ -694,42 +674,42 @@ input {
 	text-transform: uppercase;
 	padding: 5px;
 	font: .75em Arial, Helvetica, sans-serif;
-	color: #fff;
-	text-shadow: 0px 1px 0px rgba(50,50,50,1);
-	border: 1px solid rgba(50,50,50,.5);
+	color: #222;
+	text-shadow: 0px 1px 0px #fff;
+	border: 1px solid #999;
 	border-radius: 15px;
 	text-decoration: none;
-	background-color: #329334;
-	background-image: linear-gradient(bottom, #20451C 7%, #329334 45%, #5BB1AB 95%);
-	background-image: -o-linear-gradient(bottom, #20451C 7%, #329334 45%, #5BB1AB 95%);
-	background-image: -moz-linear-gradient(bottom, #20451C 7%, #329334 45%, #5BB1AB 95%);
-	background-image: -webkit-linear-gradient(bottom, #20451C 7%, #329334 45%, #5BB1AB 95%);
-	background-image: -ms-linear-gradient(bottom, #20451C 7%, #329334 45%, #5BB1AB 95%);
+	background-color: #FBED21;
+	background-image: linear-gradient(bottom, #FFF500 7%, #FFFA73 45%, #FFFCBD 95%);
+	background-image: -o-linear-gradient(bottom, #FFF500 7%, #FFFA73 45%, #FFFCBD 95%);
+	background-image: -moz-linear-gradient(bottom, #FFF500 7%, #FFFA73 45%, #FFFCBD 95%);
+	background-image: -webkit-linear-gradient(bottom, #FFF500 7%, #FFFA73 45%, #FFFCBD 95%);
+	background-image: -ms-linear-gradient(bottom, #FFF500 7%, #FFFA73 45%, #FFFCBD 95%);
 
 	background-image: -webkit-gradient(
 	linear,	left bottom, left top,
-	color-stop(0.095, #20451C),
-	color-stop(0.45, #329334),
-	color-stop(0.77, #5BB1AB));
+	color-stop(0.095, #FFFCBD),
+	color-stop(0.45, #FFFA73),
+	color-stop(0.77, #FFF500));
 }
 
 #submit_button:hover {
-	box-shadow: 0px 0px 4px #20451C;
+	box-shadow: 0px 0px 4px #0084ff;
 }
 
 #submit_button:active {
 	text-decoration: none;
-	background-image: linear-gradient(top, #20451C 7%, #329334 45%, #5BB1AB 95%);
-	background-image: -o-linear-gradient(top, #20451C 7%, #329334 45%, #5BB1AB 95%);
-	background-image: -moz-linear-gradient(top, #20451C 7%, #329334 45%, #5BB1AB 95%);
-	background-image: -webkit-linear-gradient(top, #20451C 7%, #329334 45%, #5BB1AB 95%);
-	background-image: -ms-linear-gradient(top, #20451C 7%, #329334 45%, #5BB1AB 95%);
+	background-image: linear-gradient(bottom, #FFFCBD 7%, #FFFB8C 45%, #FFF500 95%);
+	background-image: -o-linear-gradient(bottom, #FFFCBD 7%, #FFFB8C 45%, #FFF500 95%);
+	background-image: -moz-linear-gradient(bottom, #FFFCBD 7%, #FFFB8C 45%, #FFF500 95%);
+	background-image: -webkit-linear-gradient(bottom, #FFFCBD 7%, #FFFB8C 45%, #FFF500 95%);
+	background-image: -ms-linear-gradient(bottom, #FFFCBD 7%, #FFFB8C 45%, #FFF500 95%);
 
 	background-image: -webkit-gradient(
 	linear,	left top, left bottom,
-	color-stop(0.095, #20451C),
-	color-stop(0.45, #329334),
-	color-stop(0.77, #5BB1AB));
+	color-stop(0.095, #FFF500),
+	color-stop(0.45, #FFFB8C),
+	color-stop(0.77, #FFFCBD));
 
 }
 	
