@@ -27,14 +27,19 @@ margin: 25px 20px 0 0;
 	margin-top: 10px; 	
 }
 
-#company_name  a:link, a:visited{
+a:link {
 	color: #0084FF;
 }
-#company_name a:hover {
-	color: #555555;
+
+a:visited {
+	color: #0084FF;
 }
 
-#company_name a:active {
+a:hover {
+	color: #555;
+}
+
+a:active {
 	color: #000;
 }
 
