@@ -64,6 +64,11 @@
 	box-shadow: 2px 2px 2px rgba(50,50,50,.5);
 }
 
+.map_content .destination_detail h3 {
+	text-transform: uppercase;
+	font: 1.1em Arial, Helvetica, sans-serif;
+}
+
 .map_content .destination_detail .destination_photo {
 	float: left;
 	margin: 0px 15px 15px 0px;
