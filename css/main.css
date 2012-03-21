@@ -1,5 +1,53 @@
 /* Project CSS File */
 
+/*================== CSS Reset =======================*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*=====================================================*/
+
 @font-face {
     font-family: 'ChunkFiveRegular';
     src: url('../font/Chunkfive-webfont.eot');
@@ -45,7 +93,7 @@ a img {
 
 body {
 	background: url('../images/bg.png') repeat-x;
-	font-family:'RopaSansRegular', Arial, Helvetica, sans-serif;
+	font: 1em/1.25 'RopaSansRegular', Arial, Helvetica, sans-serif;
 	color: #333;
 	width: 100%;
 	margin: 0;
@@ -60,14 +108,14 @@ body {
 }
 
 .content_seperator p{
-	position: relative;
-	left: -9999px;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 .wrapper {
 	max-width: 960px;
 	padding: 0 3.125%; /*(30/960px)*/
-	background: rgba(50,50,50,.015);
 	margin: 0 auto;
 }
 
@@ -106,7 +154,7 @@ nav ul li {
 	float: left;
 	list-style: none;
 	font: 1.2em/1.5 'Share-Regular', 'Share', Arial;
-	margin-top: 10px;
+	margin-top: 25px;
 	margin-left: 2.7210884%; /*20/735px*/
 	text-shadow: 1px 1px 0px #999;
 	opacity: .85;
@@ -173,18 +221,15 @@ nav li a.current_page:link, nav li a.current_page:visited {
 }
 
 
-footer {
-	box-shadow: 0px -1px 4px rgba(0,0,0, .6);
-	height: 60px;
-	overflow: visible;
-	background: #313131;
-	background: url('../images/footer_bg.jpg') repeat-x 0 0;
-	color: #fff;
-	font: .8em Arial, Helvetica, sans-serif;
-}
+
 
 /*================================= Page 1 Sub Section 1 ============================================*/
-section {
+/*section {
+	width: 100%;
+	overflow: auto;
+}*/
+
+.section_seperator {
 	width: 100%;
 	overflow: auto;
 }
@@ -202,7 +247,7 @@ section {
 
 .service_subsection h3 {
 	width: 330px;
-	font: bold 1.15em 'ChunkFiveRegular', sans-serif;
+	font: bold 1.15em 'ChunkFive','ChunkFiveRegular', Arial, Helvetica, sans-serif;
 	text-transform: uppercase;
 	color: #004b91;
 	text-shadow: 0px 1px 0px #fff;
@@ -233,11 +278,11 @@ section {
 	-webkit-border-radius: 16px;
 	}
 
-#special_offers{
+#special_offers {
 	float: right;
 }
 	
-#special_offers h3{
+#special_offers h3 {
 	font: bold 1.15em 'ChunkFiveRegular', sans-serif;
 	text-transform: uppercase;
 	color: #004b91;
@@ -251,7 +296,7 @@ section {
 }
 
 #special_offers a{
-	margin-bottom: 20px;
+	margin-top: 15px;
 	display: inline-block;
 	height: 20px;
 	width: 90px;
@@ -321,12 +366,13 @@ section {
 .service_subsection_secondary {
 	width: 170px;
 	float: left;
-	padding:0px 0px 0px 25px;
+	padding:15px 0px 15px 25px;
 	margin: 20px; 
 }
 
 .service_subsection_secondary h3{
 	font: bold 1.15em 'ChunkFiveRegular', sans-serif;
+	margin-bottom: 5px;
 	text-transform: uppercase;
 	color: #004b91;
 	text-shadow: 0px 1px 0px #fff;
@@ -345,15 +391,23 @@ section {
 /*================================= Footer ============================================*/
 
 footer {
+	box-shadow: 0px -1px 4px rgba(0,0,0, .6);
+	height: 60px;
+	overflow: auto;
+	background: #313131;
+	background: url('../images/footer_bg.jpg') repeat-x 0 0;
+	color: #fff;
+	font: .8em Arial, Helvetica, sans-serif;
 	margin: 0;
 	padding: 0;
 	width: 100%;
 }
 
+
 #footer_container {
 	max-width: 910px;
 	margin: 0 auto;
-	padding-top: 5px;
+	padding-top: 20px;
 }
 
 #footer_nav_container {
@@ -405,3 +459,280 @@ footer {
 	float: left;
 	padding-top: 5px;
 }
+
+
+
+/*====================================== Form CSS ======================================*/
+
+
+
+#form_container {
+	background: rgba(1,108,165,.3);
+	width: 90%; /*765px/910px*/;
+	overflow: auto;
+	border-radius: 16px;
+	border: 1px solid #fff;
+	box-shadow: 0px 2px 5px rgba(50,50,50,.5);
+	padding: 3%;
+	text-shadow: 0px 1px 0px #fff;
+	margin: 0 auto 25px auto;
+}
+
+#form_header {
+	font: 2em/1.5 "ShareRegular", "Share", Arial;
+	color: #004B91;
+	text-shadow: 1px 1px 0px #fff;
+	padding-left: 2.5%;
+}
+
+
+/*=====================  Customer Service Agent Div ====================*/
+section.cta {
+	float: left;
+	width: 43%;
+	margin-left: 5%;
+}
+
+#agent_image_container {
+	width: 100%;
+	margin: 0 auto;
+}
+
+#agent_image {
+	margin: 15px 0px 0px 3%;
+}
+
+#agent_image h3 {
+	font: 1.5em/1.5 "ShareRegular", "Share", Arial;
+}
+
+#agent_image p {
+	clear: left;
+}
+
+.cta img {
+	max-width: 100%;
+	border-radius: 5px;
+	box-shadow: 1px 1px 5px #999;
+}
+
+/*=================== Form ===========================*/
+
+section#form_seperator {
+	width: 50%;
+	float: left;
+}
+
+form#reservation_form {
+	width: 100%;
+	margin: auto;
+	padding-left: 30px;
+	font: 1.2em/1.4 'RopaSansRegular', 'Ropa Sans', Arial, sans-serif;
+}
+
+:invalid {
+	background: #FFF2F2;
+	border: 1px solid #BA0000;
+}
+:valid {
+	background: #fff;
+	border: 1px solid #67D669;
+}
+
+:required {
+	background: #FFFFF0;
+}
+
+label {
+	float: left;
+	clear: left;
+	color: #555;
+	padding-top: 2%;
+	font-size: 1.25em!important;
+}
+
+input {
+	font: 1em/1.25 Arial, Helvetica, sans-serif;
+}
+
+.vehicle_selector label {
+	float: left;
+}
+
+#vehicle {
+	float: left;
+	clear: left;
+	margin-top: 25px;
+}
+
+#submit_button {
+	margin-top: 25px;
+	width: 150px;
+	height: 50px;
+}
+
+.name label{
+	float: left;
+	clear: left;
+}
+
+.name input#name_first {
+	width: 40%;
+	float: left;
+	display: inline;
+	clear: left;
+	
+}
+
+.name input#name_last {
+	width: 40%;
+	float: left;
+	margin-left: 3.4642032%;
+	
+}
+
+.email input {
+	width: 84%;
+	float: left;
+	clear: left;
+}
+
+.phone input {
+	width: 84%;
+	float: left;
+	clear: left;
+}
+
+.date_time label {
+	float: left;
+}
+
+.date_time label#time_label {
+	float: left;
+	clear: none!important;
+	margin-left: 15.0115473%;
+}
+
+.date_time input#datepicker{
+	width: 40%;
+	float: left;
+	display: inline;
+	clear: left;
+}
+
+.date_time input#pickup_time {
+	width: 40%;
+	float: left;
+	margin-left: 15px;
+	
+}
+
+.trip {
+	float: left;
+	clear: left;
+	display: inline;
+}
+
+.trip input {
+	display: inline;
+	margin: 10px 10px 10px 0px;
+	vertical-align: top;
+}
+
+.trip ul {
+	margin: 5px 0px 0px 0px;
+}
+
+.trip ul li {
+	display: inline-block;
+	margin: 0 35px 0 0;
+	list-style-type: none;
+	list-style-position: inside;
+}
+
+.trip label {
+	vertical-align: bottom;
+	padding-left: 2px;
+}
+
+.locations label {
+	float: left;
+	clear: left;
+}
+
+.locations input {
+	float: left;
+	clear: left;
+	width: 85%;
+	
+}
+
+#from_to_suggestions {
+	display: none;
+}
+
+#passenger_count input{
+	float: left;
+	clear: left;
+	width: 40%;
+}
+
+#vehicle {
+	float: left;
+	width: 40%;
+	font: .9em Arial, Helvetica, sans-serif;
+}
+
+#submit_button {
+	float: left;
+	clear: left;
+	margin-bottom: 20px;
+	display: inline-block;
+	height: 40px;
+	width: 30%;;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 5px;
+	font: .75em Arial, Helvetica, sans-serif;
+	color: #fff;
+	text-shadow: 0px 1px 0px rgba(50,50,50,1);
+	border: 1px solid rgba(50,50,50,.5);
+	border-radius: 15px;
+	text-decoration: none;
+	background-color: #329334;
+	background-image: linear-gradient(bottom, #20451C 7%, #329334 45%, #5BB1AB 95%);
+	background-image: -o-linear-gradient(bottom, #20451C 7%, #329334 45%, #5BB1AB 95%);
+	background-image: -moz-linear-gradient(bottom, #20451C 7%, #329334 45%, #5BB1AB 95%);
+	background-image: -webkit-linear-gradient(bottom, #20451C 7%, #329334 45%, #5BB1AB 95%);
+	background-image: -ms-linear-gradient(bottom, #20451C 7%, #329334 45%, #5BB1AB 95%);
+
+	background-image: -webkit-gradient(
+	linear,	left bottom, left top,
+	color-stop(0.095, #20451C),
+	color-stop(0.45, #329334),
+	color-stop(0.77, #5BB1AB));
+}
+
+#submit_button:hover {
+	box-shadow: 0px 0px 4px #20451C;
+}
+
+#submit_button:active {
+	text-decoration: none;
+	background-image: linear-gradient(top, #20451C 7%, #329334 45%, #5BB1AB 95%);
+	background-image: -o-linear-gradient(top, #20451C 7%, #329334 45%, #5BB1AB 95%);
+	background-image: -moz-linear-gradient(top, #20451C 7%, #329334 45%, #5BB1AB 95%);
+	background-image: -webkit-linear-gradient(top, #20451C 7%, #329334 45%, #5BB1AB 95%);
+	background-image: -ms-linear-gradient(top, #20451C 7%, #329334 45%, #5BB1AB 95%);
+
+	background-image: -webkit-gradient(
+	linear,	left top, left bottom,
+	color-stop(0.095, #20451C),
+	color-stop(0.45, #329334),
+	color-stop(0.77, #5BB1AB));
+
+}
+	
+
+/*=== End Form CSS ===*/
+

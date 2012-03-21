@@ -2,27 +2,29 @@
 
 #form_container {
 	background: rgba(1,108,165,.3);
-	width: 75%;
+	width: 75.0659341%; /*765px/910px*/;
 	overflow: auto;
 	border-radius: 16px;
 	border: 1px solid #fff;
 	box-shadow: 0px 2px 5px rgba(50,50,50,.5);
-	padding: 20px;
+	padding: 3%;
 	text-shadow: 0px 1px 0px #fff;
 	margin: 0 auto 25px auto;
 }
 
 #form_header {
-	position: relative;
-	bottom: -20px;
-	left: 100px;
+	font: 2em/1.5 "ShareRegular", "Share", Arial;
 	color: #0084ff;
 	text-shadow: 1px 1px 0px #fff;
+	margin-left: 5%;
 }
 
+
+/*=====================  Customer Service Agent Div ====================*/
 .cta {
 	float: right;
-	width: 50%;
+	width: 48%;
+	clear: left;
 }
 
 #agent_image_container {
@@ -31,28 +33,31 @@
 }
 
 #agent_image {
-	margin: 25px 0px 25px 25px;
+	margin: 25px 0px 0px 3%;
 }
 
 #agent_image h3 {
-	margin-bottom: 0px;
+	font: 1.5em/1.5 "ShareRegular", "Share", Arial;
 }
 
 #agent_image p {
-	position: relative;
-	top: -15px;
+	clear: left;
 }
 
 .cta img {
-	margin: 0 auto;
 	max-width: 100%;
 	border-radius: 5px;
 	box-shadow: 1px 1px 5px #999;
 }
 
+/*=================== Form ===========================*/
+
+#reservation_form {
+	width: 50%;
+}
+
 form {
 	float: left;
-	width: 50%;
 	font: 1.2em/1.4 'RopaSansRegular', 'Ropa Sans', Arial, sans-serif;
 }
 
@@ -78,7 +83,6 @@ label {
 }
 
 input {
-	width: 300px;
 	color: rgb(79,17,25);
 	font: .85em/1.5 Arial, Helvetica, sans-serif;
 }
@@ -101,7 +105,7 @@ input {
 }
 
 .name input#name_first {
-	width: 150px;
+	width: 40%;
 	float: left;
 	display: inline;
 	clear: left;
@@ -109,20 +113,20 @@ input {
 }
 
 .name input#name_last {
-	width: 150px;
+	width: 40%;
 	float: left;
-	margin-left: 15px;
+	margin-left: 3.4642032%;
 	
 }
 
 .email input {
-	width: 315px;
+	width: 84%;
 	float: left;
 	clear: left;
 }
 
 .phone input {
-	width: 315px;
+	width: 84%;
 	float: left;
 	clear: left;
 }
@@ -134,18 +138,18 @@ input {
 .date_time label#time_label {
 	float: left;
 	clear: none!important;
-	margin-left: 45px;
+	margin-left: 15.0115473%;
 }
 
 .date_time input#datepicker{
-	width: 150px;
+	width: 40%;
 	float: left;
 	display: inline;
 	clear: left;
 }
 
 .date_time input#pickup_time {
-	width: 150px;
+	width: 40%;
 	float: left;
 	margin-left: 15px;
 	
@@ -159,15 +163,11 @@ input {
 
 .trip input {
 	display: inline;
-	width: 20px;
 	margin: 10px 10px 10px 0px;
-	vertical-align: middle;
+	vertical-align: top;
 }
 
 .trip ul {
-	position: relative;
-	left: -45px;
-	list-style: none;
 	margin: 5px 0px 0px 0px;
 }
 
@@ -193,7 +193,7 @@ input {
 }
 
 .locations input {
-	width: 315px;
+	width: 185%;
 	float: left;
 	clear: left;
 }
@@ -205,16 +205,12 @@ input {
 #passenger_count input{
 	float: left;
 	clear: left;
-	width: 150px;
+	width: 40%;
 }
 
 #vehicle {
 	float: left;
-
-}
-
-select {
-	width: 150px;
+	width: 40%;
 	font: .9em Arial, Helvetica, sans-serif;
 }
 
@@ -224,7 +220,7 @@ select {
 	margin-bottom: 20px;
 	display: inline-block;
 	height: 40px;
-	width: 100px;
+	width: 30%;;
 	text-align: center;
 	text-transform: uppercase;
 	padding: 5px;
@@ -268,6 +264,6 @@ select {
 
 }
 	
-=====================  Customer Service Agent Div ====================
+
 
 

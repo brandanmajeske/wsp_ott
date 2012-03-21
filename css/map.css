@@ -1,3 +1,5 @@
+
+
 .map_container {
 	background: rgba(1,108,165,.3);
 	height: 600px;
@@ -36,7 +38,7 @@
 .map_content .form_service {
 	position: absolute;
 	top: 465px;
-	left: 270px;
+	left: 220px;
 }
 
 .map_content .detail_container {
