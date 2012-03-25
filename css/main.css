@@ -460,7 +460,7 @@ a:active {
 }
 
 .service_subsection_secondary {
-	width: 170px;
+	width: 17.6813187%; /*170px*/
 	float: left;
 	padding:15px 0px 15px 25px;
 	margin: 20px; 
@@ -543,12 +543,12 @@ footer {
 
 #footer_nav li a:hover{
 	color: #fff;
-		opacity: 1;
+	opacity: 1;
 }
 
 #footer_nav li a:active{
 	color: #fff;
-		opacity: .75;
+	opacity: .75;
 }
 
 #copyright {
@@ -588,6 +588,190 @@ footer {
 	box-shadow: 2px 2px 5px #000;
 }
 
+/*====================================== Map CSS =======================================*/
+
+.not_available_on_mobile {display: none;}
+.map_container {
+	background: rgba(1,108,165,.3);
+	height: 600px;
+	padding-top: 10px;
+	border-radius: 16px;
+	border: 1px solid #fff;
+}
+
+.map_content {
+	background: url(../images/florida.png) no-repeat 200px 0px;
+	background-attachment: scroll;
+	height: 600px;
+	width: 100%;
+	float: left;
+	position: relative;
+	color: #fff;
+	overflow: visible;
+	}
+
+.map_content a.dot {
+	background: url(../images/dots.png) no-repeat 0px 0px;
+	height: 20px;
+	width: 14px;
+	display: block;
+	cursor: pointer;
+	position: absolute;
+}
+
+.map_content a.dot:hover {
+	background-position: 0px -20px;
+}
+
+.map_content a.dot.selected {
+	background-position: 0px -40px;
+}
+
+.map_content .form_service {
+	position: absolute;
+	top: 465px;
+	left: 220px;
+}
+
+.map_content .detail_container {
+	position: absolute;
+	width: 270px;
+	height: 270px;
+	top: 155px;
+	left: 220px;
+}
+
+.map_content .destination_detail {
+	position: relative;
+	top: 0px;
+	width: 270px;
+	padding: 3%;
+	border: 1px solid #000;
+	border-top 1px solid #000;
+	background: #FFFFFF;
+	background: rgba(255,255,255,.85);
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	box-shadow: 2px 2px 2px rgba(50,50,50,.5);
+}
+
+.map_content .destination_detail h3 {
+	text-transform: uppercase;
+	font: 1.1em Arial, Helvetica, sans-serif;
+}
+
+.map_content .destination_detail .destination_photo {
+	float: left;
+	margin: 0px 15px 15px 0px;
+	border: 1px solid #fff;
+	border-radius: 8px;
+	box-shadow: 2px 2px 2px #999;
+	-webkit-box-shadow: 2px 2px 2px #999;
+	-moz-box-shadow: 2px 2px 2px #999;
+	-webkit-border-radius: 8px;
+	color: #333;
+}
+
+.map_content .destination_detail .destination_photo img {
+	width: 75px;
+	height: 75px;
+}
+
+.destination_info h2 {
+	margin: 0px;
+	font:bold 1em/1.25 'Share-Regular';
+	text-transform: uppercase;
+	color: #999;
+	text-shadow: 0px 1px 0px #fff;
+}
+
+.destination_info h3 {
+	margin: 0px 0px 12px 0px;
+	font:bold .9em/1.2'RopaSansRegular' Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	color: #0084ff;
+	text-shadow: 0px 1px 0px #fff;
+}
+
+.map_content, .destination_info p { 
+	margin: 0px 0px 12px 0px; 
+	color: #222;
+	clear: both;
+	font: 1em/1.2 'RopaSansRegular' Arial, Helvetica, sans-serif;
+}
+
+.destination_detail_container {
+	display: none;
+}
+/*=============== airport dots ====================*/
+#orlando_international {
+	top: 230px; left: 645px;
+}
+
+#orlando_executive {
+	top: 210px; left: 640px;
+}
+
+#orlando_sanford {
+	top: 190px; left: 642px;
+}
+
+/*=============== attractions dots ================*/
+
+#disney_world {
+	top: 235px; left: 620px;
+}
+
+#universal_studios {
+	top: 236px; left: 635px;
+}
+
+#orlando_science_center {
+	top: 225px; left: 655px;
+}
+
+/*============== convention center dots ===============*/
+
+#orange_county_convention_center {
+	top: 235px; left: 655px;
+}
+
+#peabody_orlando {
+	top: 243px; left: 644px;
+}
+
+#marriott_orlando {
+	top: 185px; left: 653px;
+}
+
+/*=================== port dots ========================*/
+
+#port_canaveral {
+	top: 220px; left: 700px;
+}
+
+#port_tampa {
+	top: 270px; left: 565px
+}
+
+#port_manatee {
+	top: 295px; left: 550px
+}
+
+/*=================== arena dots ========================*/
+
+#amway_arena {
+	top: 230px; left: 645px;
+}
+
+#kissimmee_sports_arena {
+	top: 270px; left: 630px;
+}
+
+#silver_spurs_arena {
+	top: 267px; left: 649px;
+}
 
 
 /*====================================== Form CSS ======================================*/
@@ -881,53 +1065,43 @@ input {
 	#special_offers h3 {font-size: 1.1em;}
 	
 	.service_subsection {margin-right: 5px; padding-right: 0px;}
+	
+	.service_subsection_secondary {padding: 5px;}
+	.service_subsection_secondary.divider {border: none;}
 }
+	
+	.services_vehicles_container.services_vehicles_page_seperator {
+		border-left: none;
+	}
+	
+	.not_available_on_mobile {display: none;}
 
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media screen and (min-width: 768px) and (max-width: 959px) {
 	
-	#logo {
-		display: block;
-		width: 100%;
-		clear: right;
-		background: #999;
-	}
+	#logo {display: block;width: 100%;clear: right;background: #999;}
 
-	nav {
-		width: 80%;	
-	}
+	nav {width: 80%;}
 	
-	nav ul li {
-		font-size: .87em;
-	}
+	nav ul li {font-size: .87em;}
 	
-	#marquee_header {
-		float: left;
-		width: 75%;
-	}
+	#marquee_header {float: left;width: 75%;}
 	
-	.sub_section_img_container {
-		width: 22%;
-	}
+	.sub_section_img_container {width: 22%;}
 	
-	#special_offers {
-		clear:left;
-		float: left;
-		font-size: 1em;
-	}
+	#special_offers {clear:left;float: left;font-size: 1em;}
 	
-	.service_subsection {
-		border-right: none;
-		font-size: 1em;
-		width: 50%;
-		clear: right;
-	}
+	.service_subsection {border-right: none;font-size: 1em;width: 50%;clear: right;}
 	
-	#service_descriptions {
-		width: 80%;
-	}
-	
+	#service_descriptions {width: 80%;margin: 0 auto;}
+	.service_subsection_secondary {padding: 5px; margin: 15px;}
 	.service_subsection_secondary.divider {border: none;}
+	
+	.services_vehicles_container {float; left;margin-left: 5%;}
+	
+	.services_vehicles_container.services_vehicles_page_seperator {border-left: none;float: right;margin-right: 5%;}
+	
+	.not_available_on_mobile {display: none;}
 	
 } /*END TABLET*/
 
@@ -935,80 +1109,191 @@ input {
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 
 	
-	#logo {
-		display: block;
-		width: 100%;
-		clear: right;
-		background: red;
-	}
-
-	nav {
-		width: 80%;	
-		clear: both;
-	}
+	body {background-image: none;}
 	
-	nav ul li {
-		font-size: .8em;
-	}
+	header {background: #313131;height: 265px;}
 	
-	#marquee_header {
-		float: left;
-		width: 75%;
-	}
+	#logo {display: none;}
 
+
+	nav {background: url(../images/logo.png) no-repeat 50% 0px;
+		width: 100%;clear: both;overflow: visible;}
+	
+	nav ul li {font-size: .85em;float: none;}
+	
+	#marquee_header {float: left;width: 75%;margin-left: 5%;	}
+	
+	#marquee_header h1 {font-size: 1.35em;}
+	#marquee_header h2 {font-size: 1.15em;}
+	#marquee_header p {font-size: 1em;}
+	
 	.marquee_container {display: none;}
 	
-	.sub_section_img_container {
-		width: 22%;
-	}
+	.sub_section_img_container {width: 22%;}
 	
-	#special_offers {
-		clear:left;
-		float: left;
-		font-size: .8em;
-	}
+	#special_offers {clear:left;float: left;font-size: .8em;}
 	
-	.service_subsection {
-		border-right: none;
-		font-size: .85em;
-		width: 50%;
-		clear: right;
-	}
+	.service_subsection {border-right: none;font-size: .8em;width: 50%;clear: right;margin-left: 5%;}
 	
-	#service_descriptions {
-		width: 100%;
-	}
+	#special_offers {margin-left: 5%;}
 	
+	#service_descriptions {width: 80%;}
+	
+	#service_descriptions {width: 100%;margin: 0 auto;}
+	.service_subsection_secondary {width: 80%;}
 	.service_subsection_secondary.divider {border: none;}
+	
+	.services_vehicles_container {float; left;font-size: .85em;padding: 0;}
+	
+	.services_vehicles_container.services_vehicles_page_seperator {border-left: none;float: left;}
+	
+	#copyright{width 100%; margin-left: 5%;}
+	#footer_nav {display: none;}
+
+	#reservation_form {font-size: .85em;}
+	label {font-size: .85em!important;}
+	
+	#reservation_form input {font-size: .7em!important;}
+	#vehicle {font-size: .7em;
+	
+}
+/*==========================Mobile Map ================================*/	
+	.not_available_on_mobile {display: none;}
+	.map_content {
+	background: url(../images/florida.png) no-repeat 0px 0px;
+	background-attachment: scroll;
+	height: 600px;
+	width: 100%;
+	float: left;
+	position: relative;
+	color: #fff;
+	overflow: visible;
+	}
+	
+	.map_content .form_service {
+	position: absolute;
+	top: 465px;
+	left: 20px;
+}
+
+.map_content .detail_container {
+	position: absolute;
+	width: 270px;
+	height: 270px;
+	top: 155px;
+	left: 20px;
+	color: #000;
+}
+	
+/*=============== airport dots ====================*/
+#orlando_international {
+	top: 230px; left: 445px;
+}
+
+#orlando_executive {
+	top: 210px; left: 440px;
+}
+
+#orlando_sanford {
+	top: 190px; left: 442px;
+}
+
+/*=============== attractions dots ================*/
+
+#disney_world {
+	top: 235px; left: 420px;
+}
+
+#universal_studios {
+	top: 236px; left: 435px;
+}
+
+#orlando_science_center {
+	top: 225px; left: 455px;
+}
+
+/*============== convention center dots ===============*/
+
+#orange_county_convention_center {
+	top: 235px; left: 455px;
+}
+
+#peabody_orlando {
+	top: 243px; left: 444px;
+}
+
+#marriott_orlando {
+	top: 185px; left: 453px;
+}
+
+/*=================== port dots ========================*/
+
+#port_canaveral {
+	top: 220px; left: 500px;
+}
+
+#port_tampa {
+	top: 270px; left: 365px
+}
+
+#port_manatee {
+	top: 295px; left: 350px
+}
+
+/*=================== arena dots ========================*/
+
+#amway_arena {
+	top: 230px; left: 445px;
+}
+
+#kissimmee_sports_arena {
+	top: 270px; left: 430px;
+}
+
+#silver_spurs_arena {
+	top: 267px; left: 449px;
+}
+	
+	
 	
 } /*END MOBILE LANDSCAPE*/
 
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
+
+	body {background-image: none;}
+	
+	header {
+		background: #313131;
+		height: 265px;
+	}
 	
 	#logo {
-		float: none;
-		display: block;
-		width: 100%;
-		clear: both;
-		background: green;
+		display: none;
 	}
 
+
 	nav {
-		width: 80%;	
+		width: 100%;	
 		clear: both;
-		float: none;
+		overflow: visible;
 	}
 	
 	nav ul li {
-		font-size: .8em;
+		font-size: .85em;
+		float: none;
 	}
 	
 	#marquee_header {
 		float: left;
 		width: 75%;
+		margin-left: 5%;
 	}
+	
+	#marquee_header h1 {font-size: 1.35em;}
+	#marquee_header h2 {font-size: 1.15em;}
+	#marquee_header p {font-size: 1em;}
 	
 	.marquee_container {display: none;}
 	
@@ -1027,14 +1312,50 @@ input {
 		font-size: .8em;
 		width: 50%;
 		clear: right;
+		margin-left: 5%;
 	}
+	
+	#special_offers {margin-left: 5%;}
 	
 	#service_descriptions {
-		width: 100%;
+		width: 80%;
 	}
-	.service_subsection_secondary {width: 80%;}
 	
+	#service_descriptions {width: 100%;margin: 0 auto;}
+	.service_subsection_secondary {width: 80%;}
 	.service_subsection_secondary.divider {border: none;}
 	
+		.services_vehicles_container {
+		float; left;
+		font-size: .85em;
+		padding: 0;
+	}
+	
+	.services_vehicles_container.services_vehicles_page_seperator {
+		border-left: none;
+		float: left;
+	}
+	
+	#copyright{width 100%; margin-left: 5%;}
+	#footer_nav {display: none;}
+
+		#reservation_form {
+		font-size: .85em;
+	}
+	label { 
+		font-size: .85em!important;
+	}
+	
+	#reservation_form input {
+		font-size: .7em!important;
+	}
+	#vehicle {
+	font-size: .7em;
+}
+	
+	
+	.not_available_on_mobile {display: block;}
+	
+	.map_container {display: none;}
 	
 } /*END MOBILE PORTRAIT*/
