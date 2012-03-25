@@ -4,20 +4,9 @@
 		<meta charset='utf-8'>
 		<title>Reservations</title>
 		<link rel="stylesheet" href="css/main.css" />
-		<!-- <link rel="stylesheet" type="text/css" href="css/form.css" /> -->
-		<link type="text/css" href="css/ui-lightness/jquery-ui-1.8.18.custom.css" rel="stylesheet" />   
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.min.js"></script>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
-		<script type="text/javascript" src="scripts/modernizr-2.5.3.js"></script>
-		<script type="text/javascript" src="scripts/form.js"></script>
-		<!--<script type="text/javascript" src="scripts/spinner.js"></script> -->
-		<script type="text/javascript" src="scripts/webforms2.js"></script>
-		<!-- <script type="text/javascript" src="scripts/jquery.ui.spinner.js"></script> -->
-
-		
-		<!--[if lt IE 9]>
-		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 	</head>
 	<body>
 		<div class="wrapper">
@@ -90,8 +79,8 @@
 						<div class="date_time">
 							<label>Pick-up Date</label>
 							<label id="time_label">Time</label>
-							<input type="text" title="Choose your pick-up date" id="datepicker" min="2012-03-18" required/>
-							<input type="time" title="Choose your pick-up time" id="pickup_time" value="06:00 AM" required/>
+							<input type="text" title="Choose your pick-up date" id="datepicker" placeholder="2012-03-18" required/>
+							<input type="time" title="Choose your pick-up time" id="pickup_time" placeholder="06:00 AM" required/>
 						</div>	
 						
 						<div class="trip">
@@ -108,9 +97,9 @@
 						
 						<div class="locations">
 							<label id="from_label">Pick-up Location</label>
-							<input id="from" name ="from_location" type="text" list="from_to_suggestions" title="Please enter the location you would like to be picked up from"/>
+							<input id="from" name ="from_location" type="text" list="from_to_suggestions" title="Please enter the location you would like to be picked up from" required/>
 							<label id="to_label">Drop-off Location</label>
-							<input id="to" name="to_location" type="text" list="from_to_suggestions" title="Please enter the location you would like as your destination"/>
+							<input id="to" name="to_location" type="text" list="from_to_suggestions" title="Please enter the location you would like as your destination" required/>
 														
 							<datalist id="from_to_suggestions">
 								<option>Orlando Sanford Airport</option>
@@ -132,12 +121,12 @@
 						</div>	
 						<div id="passenger_count">
 							<label>Passengers</label>
-							<input type="number" title="Enter the number of passengers" min="1" max="50" value="1" required />
+							<input type="number" title="Enter the number of passengers" placeholder="1" required />
 						</div>								
 					
 					
 						
-							<select id="vehicle" name="vehicle" title="Choose a vehicle">
+							<select id="vehicle" name="vehicle" title="Choose a vehicle" required>
 								<option>Airport Shuttle</option>
 								<option>Taxi</option>
 								<option>SUV</option>
@@ -158,7 +147,7 @@
 					<section class="section_seperator" id="service_descriptions">
 						<div class="service_subsection_secondary">
 							<h3>Punctual</h3>
-							<p>Most travel time is under 30 minutes in duration.</p>
+							<p>Most travel time is concluded in under 30 minutes, start to finish, door to door.</p>
 						</div>
 						<div class="service_subsection_secondary divider">
 							<h3>Professional</h3>
@@ -170,7 +159,7 @@
 						</div>
 						<div class="service_subsection_secondary divider">
 							<h3>Need a Quote?</h3>
-							<p>Call our friendly customer service staff at <strong>407-855-4600</strong>!</p>
+							<p>Just call our friendly customer service staff waiting to talk to you. <strong>407-855-4600</strong></p>
 						</div>
 					</section>
 								

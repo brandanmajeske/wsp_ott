@@ -6,7 +6,7 @@ margin: 25px 20px 0 0;
 }
 
 #marquee_header h1 {
-	font: bold 2em 'Share-Regular', 'Share', Arial;
+	font: bold 1.75em Tahoma, Arial, sans-serif;
 	margin: 0;
 	padding: 0;
 	text-transform: uppercase;
@@ -15,7 +15,7 @@ margin: 25px 20px 0 0;
 }
 
 #marquee_header h2 {
-	font: bold 1.5em/1.25 'Share-Regular', "Share", Arial;
+	font: bold 1.5em/1.25 'Lucida Sans Unicode', Courier, Arial;
 	margin: 0;
 	padding: 0;
 	color: #333;
@@ -23,7 +23,7 @@ margin: 25px 20px 0 0;
 }
 
 #marquee_header p {
-	font: 1.25em/1.35 'RopaSansRegular', 'Ropa Sans', Arial;
+	font: 1.25em/1.35 Arial, sans-serif;
 	margin-top: 10px; 	
 }
 
@@ -76,7 +76,7 @@ a:active {
 	margin: 0;
 	padding: 15px 0 10px 0;
 	color: #fff;
-	font-family:'Share-Regular', Arial, Helvetica, sans-serif;
+	font-family: 'Lucida Sans Unicode', Tahoma, Arial, sans-serif;
 	background: url('../images/template/marquee_caption.png') no-repeat 0 0;
 }
 
@@ -95,7 +95,7 @@ a:active {
 .marquee_caption_content p {
 	margin-bottom: 10px;
 	color: #fff;
-	font: 1.1em/1.2 "Share-Regular";
+	font: 1.1em/1.2 'Lucida Sans Unicode', Tahoma, sans-serif;
 }
 
 .marquee_caption_content a {

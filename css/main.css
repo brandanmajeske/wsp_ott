@@ -48,40 +48,6 @@ table {
 
 /*=====================================================*/
 
-@font-face {
-    font-family: 'ChunkFiveRegular';
-    src: url('../font/Chunkfive-webfont.eot');
-    src: url('../font/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/Chunkfive-webfont.woff') format('woff'),
-         url('../font/Chunkfive-webfont.ttf') format('truetype'),
-         url('../font/Chunkfive-webfont.svg#ChunkFiveRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'RopaSansRegular';
-    src: url('../font/RopaSans-Regular-webfont.eot');
-    src: url('../font/RopaSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/RopaSans-Regular-webfont.woff') format('woff'),
-         url('../font/RopaSans-Regular-webfont.ttf') format('truetype'),
-         url('../font/RopaSans-Regular-webfont.svg#RopaSansRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-@font-face {
-    font-family: 'Share-Regular';
-    src: url('../font/Share-Regular-webfont.eot');
-    src: url('../font/Share-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/Share-Regular-webfont.woff') format('woff'),
-         url('../font/Share-Regular-webfont.ttf') format('truetype'),
-         url('../font/Share-Regular-webfont.svg#Share-Regular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
 
 .clearfix {
 	clear: both;
@@ -95,7 +61,7 @@ a img {
 
 body {
 	background: url('../images/bg.png') repeat-x;
-	font: 1em/1.25 'RopaSansRegular', Arial, Helvetica, sans-serif;
+	font: .9em/1.25 Tahoma, Arial, sans-serif;
 	color: #333;
 	width: 100%;
 	margin: 0;
@@ -155,7 +121,7 @@ nav ul li {
 	display: block;
 	float: left;
 	list-style: none;
-	font: 1.2em/1.5 'Share-Regular', 'Share', Arial;
+	font: 1.1em/1.5 Tahoma, Geneva, sans-serif;
 	margin-top: 25px;
 	margin-left: 2.7210884%; /*20/735px*/
 	text-shadow: 1px 1px 0px #999;
@@ -223,6 +189,157 @@ nav li a.current_page:link, nav li a.current_page:visited {
 }
 
 
+/*================================= Marquee styles ==================================================*/
+
+
+#marquee_header{
+float: right;
+width: 356px;
+margin: 25px 20px 0 0;
+}
+
+#marquee_header h1 {
+	font: bold 1.75em Tahoma, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	color: #0084FF;
+	text-shadow: 1px 1px 0px #fff;
+}
+
+#marquee_header h2 {
+	font: bold 1.5em/1.25 'Lucida Sans Unicode', Courier, Arial;
+	margin: 0;
+	padding: 0;
+	color: #333;
+	text-shadow: 1px 1px 0px #fff;
+}
+
+#marquee_header p {
+	font: 1.25em/1.35 Arial, sans-serif;
+	margin-top: 10px; 	
+}
+
+a:link {
+	color: #0084FF;
+}
+
+a:visited {
+	color: #0084FF;
+}
+
+a:hover {
+	color: #555;
+}
+
+a:active {
+	color: #000;
+}
+
+.marquee_container {
+	position: relative;
+	width: 544px; /*544px/910px*/
+	height: 330px;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	border: 5px solid rgba(180,180,180, .5);
+	clear: left; 
+}
+
+.marquee_photo {
+	width: 544px;
+	height: 330px;
+}
+
+
+.marquee_photos { 
+	position: absolute; 
+	top: 0px; 
+	left: 0px; 
+	display: none;
+
+}
+
+.marquee_caption {
+	position: absolute;
+	top: 290px;
+	left: 0px;
+	width: 544px;
+	margin: 0;
+	padding: 15px 0 10px 0;
+	color: #fff;
+	font-family: 'Lucida Sans Unicode', Tahoma, Arial, sans-serif;
+	background: url('../images/template/marquee_caption.png') no-repeat 0 0;
+}
+
+.marquee_caption_content {
+	width: 430px;
+	padding: 0px 0px 0px 20px;	
+}
+
+.marquee_caption h2 {
+	font-size: 1.15em;
+	text-transform: uppercase;
+	margin: 15px 0px 0px 0px;
+	color: #fff;	
+}
+
+.marquee_caption_content p {
+	margin-bottom: 10px;
+	color: #fff;
+	font: 1.1em/1.2 'Lucida Sans Unicode', Tahoma, sans-serif;
+}
+
+.marquee_caption_content a {
+	color: #fc0;
+}
+
+.marquee_caption_content a:hover {
+	color: #0084ff;
+}
+
+.marquee_nav {
+	position: absolute;
+	width: 240px;
+	top: 295px;
+	right: 20px;
+	text-align: right;
+}
+
+.marquee_nav a {
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	margin-left: 5px;
+	background: url('../images/template/nav_buttons.png') no-repeat;
+	cursor: pointer;
+}
+
+.marquee_nav a:hover {
+	background-position: -25px 0;
+}
+
+.marquee_nav a.selected {
+	background-position: -50px 0;
+}
+
+.marquee_panels {
+	display: none;
+}
+
+.marquee_container.autoplay .marquee_nav a {
+	opacity: .4;
+	filter: alpha(opacity=40)
+}
+
+.marquee_container.autoplay .marquee_nav a.selected {
+	opacity: 1;
+	filter: alpha(opacity=100)
+}
+
+
+
 
 
 /*================================= Page 1 Sub Section 1 ============================================*/
@@ -261,7 +378,7 @@ nav li a.current_page:link, nav li a.current_page:visited {
 
 .service_subsection h3 {
 	width: 330px;
-	font: bold 1.15em 'ChunkFive','ChunkFiveRegular', Arial, Helvetica, sans-serif;
+	font: bold 1.15em Tahoma, Arial, Helvetica, sans-serif;
 	text-transform: uppercase;
 	color: #004b91;
 	text-shadow: 0px 1px 0px #fff;
@@ -297,7 +414,7 @@ nav li a.current_page:link, nav li a.current_page:visited {
 }
 	
 #special_offers h3 {
-	font: bold 1.15em 'ChunkFiveRegular', sans-serif;
+	font: bold 1.15em Tahoma, Arial, sans-serif;
 	text-transform: uppercase;
 	color: #004b91;
 	text-shadow: 0px 1px 0px #fff;
@@ -439,6 +556,38 @@ footer {
 	padding-top: 5px;
 }
 
+/*====================================== Rates CSS =====================================*/
+
+#rates_content {
+	width: 100%;
+	overflow: auto;
+}
+
+.rates_image_container {
+	float: left;
+	width: 45%;
+	margin: 25px 0 25px 25px;
+	border-radius: 16px;
+	-moz-border-radius: 16px;
+	-webkit-border-radius: 16px;
+	-o-border-radius: 16px;
+}
+
+.rates_image_container img {
+	max-width: 100%;
+	box-shadow: 2px 2px 5px #000;
+}
+
+.specials_image_container {
+	margin: 25px;
+	width: 92.5%;
+}
+
+.specials_image_container img{
+	max-width: 100%;
+	box-shadow: 2px 2px 5px #000;
+}
+
 
 
 /*====================================== Form CSS ======================================*/
@@ -506,7 +655,7 @@ form#reservation_form {
 	width: 100%;
 	margin: auto;
 	padding-left: 30px;
-	font: 1.2em/1.4 'RopaSansRegular', 'Ropa Sans', Arial, sans-serif;
+	font: 1.2em/1.4 Tahoma, Arial, sans-serif;
 }
 
 :invalid {
@@ -531,7 +680,7 @@ label {
 }
 
 input {
-	font: 1em/1.25 Arial, Helvetica, sans-serif;
+	font: .9em/1.25 Tahoma, Arial, sans-serif;
 }
 
 .vehicle_selector label {
@@ -716,3 +865,176 @@ input {
 
 /*=== End Form CSS ===*/
 
+
+/* =================== Media Queries =================== */
+@media screen and (min-width: 960px) and (max-width: 1020px) {
+	
+	nav {background: #004B91;width: 75%;}
+	nav ul li {font-size: 1em;}
+
+	#marquee_header {width: 34%;}
+	#marquee_header h1{font-size: 1.5em;}
+	#marquee_header h2 {font-size: 1.35em;}
+	#marquee_header p {font-size: 1.1em;}
+		
+	#special_offers {float: left; width: 20%;}
+	#special_offers h3 {font-size: 1.1em;}
+	
+	.service_subsection {margin-right: 5px; padding-right: 0px;}
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media screen and (min-width: 768px) and (max-width: 959px) {
+	
+	#logo {
+		display: block;
+		width: 100%;
+		clear: right;
+		background: #999;
+	}
+
+	nav {
+		width: 80%;	
+	}
+	
+	nav ul li {
+		font-size: .87em;
+	}
+	
+	#marquee_header {
+		float: left;
+		width: 75%;
+	}
+	
+	.sub_section_img_container {
+		width: 22%;
+	}
+	
+	#special_offers {
+		clear:left;
+		float: left;
+		font-size: 1em;
+	}
+	
+	.service_subsection {
+		border-right: none;
+		font-size: 1em;
+		width: 50%;
+		clear: right;
+	}
+	
+	#service_descriptions {
+		width: 80%;
+	}
+	
+	.service_subsection_secondary.divider {border: none;}
+	
+} /*END TABLET*/
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+	
+	#logo {
+		display: block;
+		width: 100%;
+		clear: right;
+		background: red;
+	}
+
+	nav {
+		width: 80%;	
+		clear: both;
+	}
+	
+	nav ul li {
+		font-size: .8em;
+	}
+	
+	#marquee_header {
+		float: left;
+		width: 75%;
+	}
+
+	.marquee_container {display: none;}
+	
+	.sub_section_img_container {
+		width: 22%;
+	}
+	
+	#special_offers {
+		clear:left;
+		float: left;
+		font-size: .8em;
+	}
+	
+	.service_subsection {
+		border-right: none;
+		font-size: .85em;
+		width: 50%;
+		clear: right;
+	}
+	
+	#service_descriptions {
+		width: 100%;
+	}
+	
+	.service_subsection_secondary.divider {border: none;}
+	
+} /*END MOBILE LANDSCAPE*/
+
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+	
+	#logo {
+		float: none;
+		display: block;
+		width: 100%;
+		clear: both;
+		background: green;
+	}
+
+	nav {
+		width: 80%;	
+		clear: both;
+		float: none;
+	}
+	
+	nav ul li {
+		font-size: .8em;
+	}
+	
+	#marquee_header {
+		float: left;
+		width: 75%;
+	}
+	
+	.marquee_container {display: none;}
+	
+	.sub_section_img_container {
+		width: 22%;
+	}
+	
+	#special_offers {
+		clear:left;
+		float: left;
+		font-size: .8em;
+	}
+	
+	.service_subsection {
+		border-right: none;
+		font-size: .8em;
+		width: 50%;
+		clear: right;
+	}
+	
+	#service_descriptions {
+		width: 100%;
+	}
+	.service_subsection_secondary {width: 80%;}
+	
+	.service_subsection_secondary.divider {border: none;}
+	
+	
+} /*END MOBILE PORTRAIT*/
